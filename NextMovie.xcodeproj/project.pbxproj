@@ -64,19 +64,67 @@
 		A306267B21A9F188001E48AA /* NextMovie */ = {
 			isa = PBXGroup;
 			children = (
-				A306267C21A9F188001E48AA /* AppDelegate.swift */,
+				A306268321A9F18A001E48AA /* Assets.xcassets */,
+				A330BFBC21AB246500C445DE /* base */,
+				A330BFBA21AB241F00C445DE /* extension */,
+				A330BFBB21AB243100C445DE /* feature */,
+				A330BFBF21AB249200C445DE /* helper */,
+				A330BFBD21AB248200C445DE /* model */,
+				A330BFBE21AB248700C445DE /* service */,
+			);
+			path = NextMovie;
+			sourceTree = "<group>";
+		};
+		A330BFBA21AB241F00C445DE /* extension */ = {
+			isa = PBXGroup;
+			children = (
+				A330BFB821AB213400C445DE /* LWNavigationController.swift */,
+			);
+			path = extension;
+			sourceTree = "<group>";
+		};
+		A330BFBB21AB243100C445DE /* feature */ = {
+			isa = PBXGroup;
+			children = (
 				A306267E21A9F188001E48AA /* SplashViewController.swift */,
 				A306268021A9F188001E48AA /* Splash.storyboard */,
-				A306268321A9F18A001E48AA /* Assets.xcassets */,
-				A306268521A9F18A001E48AA /* LaunchScreen.storyboard */,
-				A306268821A9F18A001E48AA /* Info.plist */,
-				A330BFB021AB1A5900C445DE /* RootViewController.swift */,
 				A330BFB221AB1C7700C445DE /* Movie.storyboard */,
 				A330BFB421AB1CD100C445DE /* MovieListTableViewController.swift */,
 				A330BFB621AB1CE400C445DE /* MovieDetailViewController.swift */,
-				A330BFB821AB213400C445DE /* LWNavigationController.swift */,
 			);
-			path = NextMovie;
+			path = feature;
+			sourceTree = "<group>";
+		};
+		A330BFBC21AB246500C445DE /* base */ = {
+			isa = PBXGroup;
+			children = (
+				A306267C21A9F188001E48AA /* AppDelegate.swift */,
+				A306268521A9F18A001E48AA /* LaunchScreen.storyboard */,
+				A306268821A9F18A001E48AA /* Info.plist */,
+				A330BFB021AB1A5900C445DE /* RootViewController.swift */,
+			);
+			path = base;
+			sourceTree = "<group>";
+		};
+		A330BFBD21AB248200C445DE /* model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		A330BFBE21AB248700C445DE /* service */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = service;
+			sourceTree = "<group>";
+		};
+		A330BFBF21AB249200C445DE /* helper */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = helper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -304,7 +352,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PEW6979Z9C;
-				INFOPLIST_FILE = NextMovie/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/NextMovie/base/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -322,7 +370,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PEW6979Z9C;
-				INFOPLIST_FILE = NextMovie/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/NextMovie/base/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
