@@ -24,6 +24,18 @@
 		A330BFC921AB2B0200C445DE /* DateHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A330BFC821AB2B0200C445DE /* DateHelper.swift */; };
 		A330BFCB21AB2B4600C445DE /* ApiConstant.plist in Resources */ = {isa = PBXBuildFile; fileRef = A330BFCA21AB2B4600C445DE /* ApiConstant.plist */; };
 		A330BFCD21AB2CED00C445DE /* ApiHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A330BFCC21AB2CED00C445DE /* ApiHelper.swift */; };
+		A330BFD721AB37DE00C445DE /* LWTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A330BFD321AB37DD00C445DE /* LWTableViewController.swift */; };
+		A330BFD821AB37DE00C445DE /* LWContainerViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A330BFD421AB37DD00C445DE /* LWContainerViewProtocol.swift */; };
+		A330BFD921AB37DE00C445DE /* LWViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A330BFD521AB37DE00C445DE /* LWViewController.swift */; };
+		A330BFDA21AB37DE00C445DE /* LWViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A330BFD621AB37DE00C445DE /* LWViewControllerProtocol.swift */; };
+		A330BFDB21AB380700C445DE /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A330BFD221AB37DD00C445DE /* ErrorView.swift */; };
+		A330BFDC21AB381200C445DE /* ErrorView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A330BFD121AB37DD00C445DE /* ErrorView.xib */; };
+		A330BFE021AB38D600C445DE /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A330BFDD21AB38D500C445DE /* UIImage.swift */; };
+		A330BFE121AB38D600C445DE /* UIFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = A330BFDE21AB38D500C445DE /* UIFont.swift */; };
+		A330BFE221AB38D600C445DE /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A330BFDF21AB38D500C445DE /* UIColor.swift */; };
+		A330BFEA21AB393100C445DE /* SF-Pro-Display-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = A330BFE721AB393000C445DE /* SF-Pro-Display-Regular.otf */; };
+		A330BFEB21AB393100C445DE /* SF-Pro-Text-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = A330BFE821AB393000C445DE /* SF-Pro-Text-Semibold.otf */; };
+		A330BFEC21AB393100C445DE /* SF-Pro-Text-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = A330BFE921AB393100C445DE /* SF-Pro-Text-Regular.otf */; };
 		EA7D270DB24E3D9BC96D9C2E /* Pods_NextMovie.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4028110BCCDCD4231CB779CA /* Pods_NextMovie.framework */; };
 /* End PBXBuildFile section */
 
@@ -48,6 +60,18 @@
 		A330BFC821AB2B0200C445DE /* DateHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateHelper.swift; sourceTree = "<group>"; };
 		A330BFCA21AB2B4600C445DE /* ApiConstant.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = ApiConstant.plist; sourceTree = "<group>"; };
 		A330BFCC21AB2CED00C445DE /* ApiHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiHelper.swift; sourceTree = "<group>"; };
+		A330BFD121AB37DD00C445DE /* ErrorView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ErrorView.xib; sourceTree = "<group>"; };
+		A330BFD221AB37DD00C445DE /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
+		A330BFD321AB37DD00C445DE /* LWTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LWTableViewController.swift; sourceTree = "<group>"; };
+		A330BFD421AB37DD00C445DE /* LWContainerViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LWContainerViewProtocol.swift; sourceTree = "<group>"; };
+		A330BFD521AB37DE00C445DE /* LWViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LWViewController.swift; sourceTree = "<group>"; };
+		A330BFD621AB37DE00C445DE /* LWViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LWViewControllerProtocol.swift; sourceTree = "<group>"; };
+		A330BFDD21AB38D500C445DE /* UIImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
+		A330BFDE21AB38D500C445DE /* UIFont.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIFont.swift; sourceTree = "<group>"; };
+		A330BFDF21AB38D500C445DE /* UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+		A330BFE721AB393000C445DE /* SF-Pro-Display-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Regular.otf"; sourceTree = "<group>"; };
+		A330BFE821AB393000C445DE /* SF-Pro-Text-Semibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-Semibold.otf"; sourceTree = "<group>"; };
+		A330BFE921AB393100C445DE /* SF-Pro-Text-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-Regular.otf"; sourceTree = "<group>"; };
 		DC00D6838E827DB7470F721E /* Pods-NextMovie.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NextMovie.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NextMovie/Pods-NextMovie.debug.xcconfig"; sourceTree = "<group>"; };
 		EEDC8C75EC0DB8005B8D8E4E /* Pods-NextMovie.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NextMovie.release.xcconfig"; path = "Pods/Target Support Files/Pods-NextMovie/Pods-NextMovie.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -105,6 +129,7 @@
 				A306268321A9F18A001E48AA /* Assets.xcassets */,
 				A330BFBC21AB246500C445DE /* base */,
 				A330BFBA21AB241F00C445DE /* extension */,
+				A330BFE621AB38FB00C445DE /* font */,
 				A330BFBB21AB243100C445DE /* feature */,
 				A330BFBF21AB249200C445DE /* helper */,
 				A330BFBD21AB248200C445DE /* model */,
@@ -116,7 +141,15 @@
 		A330BFBA21AB241F00C445DE /* extension */ = {
 			isa = PBXGroup;
 			children = (
+				A330BFD021AB37DD00C445DE /* error-view */,
+				A330BFD421AB37DD00C445DE /* LWContainerViewProtocol.swift */,
 				A330BFB821AB213400C445DE /* LWNavigationController.swift */,
+				A330BFD321AB37DD00C445DE /* LWTableViewController.swift */,
+				A330BFD521AB37DE00C445DE /* LWViewController.swift */,
+				A330BFD621AB37DE00C445DE /* LWViewControllerProtocol.swift */,
+				A330BFDF21AB38D500C445DE /* UIColor.swift */,
+				A330BFDE21AB38D500C445DE /* UIFont.swift */,
+				A330BFDD21AB38D500C445DE /* UIImage.swift */,
 			);
 			path = extension;
 			sourceTree = "<group>";
@@ -188,6 +221,26 @@
 			path = movie;
 			sourceTree = "<group>";
 		};
+		A330BFD021AB37DD00C445DE /* error-view */ = {
+			isa = PBXGroup;
+			children = (
+				A330BFD121AB37DD00C445DE /* ErrorView.xib */,
+				A330BFD221AB37DD00C445DE /* ErrorView.swift */,
+			);
+			path = "error-view";
+			sourceTree = "<group>";
+		};
+		A330BFE621AB38FB00C445DE /* font */ = {
+			isa = PBXGroup;
+			children = (
+				A330BFE721AB393000C445DE /* SF-Pro-Display-Regular.otf */,
+				A330BFE921AB393100C445DE /* SF-Pro-Text-Regular.otf */,
+				A330BFE821AB393000C445DE /* SF-Pro-Text-Semibold.otf */,
+			);
+			name = font;
+			path = "New Group";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -251,7 +304,11 @@
 				A306268721A9F18A001E48AA /* LaunchScreen.storyboard in Resources */,
 				A306268421A9F18A001E48AA /* Assets.xcassets in Resources */,
 				A306268221A9F188001E48AA /* Splash.storyboard in Resources */,
+				A330BFDC21AB381200C445DE /* ErrorView.xib in Resources */,
+				A330BFEB21AB393100C445DE /* SF-Pro-Text-Semibold.otf in Resources */,
 				A330BFCB21AB2B4600C445DE /* ApiConstant.plist in Resources */,
+				A330BFEC21AB393100C445DE /* SF-Pro-Text-Regular.otf in Resources */,
+				A330BFEA21AB393100C445DE /* SF-Pro-Display-Regular.otf in Resources */,
 				A330BFB321AB1C7700C445DE /* Movie.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -304,16 +361,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A330BFD721AB37DE00C445DE /* LWTableViewController.swift in Sources */,
+				A330BFD821AB37DE00C445DE /* LWContainerViewProtocol.swift in Sources */,
 				A330BFCD21AB2CED00C445DE /* ApiHelper.swift in Sources */,
 				A330BFB921AB213400C445DE /* LWNavigationController.swift in Sources */,
+				A330BFDB21AB380700C445DE /* ErrorView.swift in Sources */,
 				A330BFC521AB2AA000C445DE /* NetworkHelper.swift in Sources */,
 				A330BFC121AB2A4300C445DE /* RequestHelper.swift in Sources */,
 				A330BFB521AB1CD100C445DE /* MovieListTableViewController.swift in Sources */,
 				A330BFB721AB1CE400C445DE /* MovieDetailViewController.swift in Sources */,
+				A330BFE221AB38D600C445DE /* UIColor.swift in Sources */,
 				A330BFC721AB2AC300C445DE /* StoryboardHelper.swift in Sources */,
+				A330BFE121AB38D600C445DE /* UIFont.swift in Sources */,
 				A306267F21A9F188001E48AA /* SplashViewController.swift in Sources */,
 				A306267D21A9F188001E48AA /* AppDelegate.swift in Sources */,
 				A330BFB121AB1A5900C445DE /* RootViewController.swift in Sources */,
+				A330BFD921AB37DE00C445DE /* LWViewController.swift in Sources */,
+				A330BFDA21AB37DE00C445DE /* LWViewControllerProtocol.swift in Sources */,
+				A330BFE021AB38D600C445DE /* UIImage.swift in Sources */,
 				A330BFC921AB2B0200C445DE /* DateHelper.swift in Sources */,
 				A330BFC321AB2A7E00C445DE /* ParseHelper.swift in Sources */,
 			);
@@ -465,6 +530,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PEW6979Z9C;
 				INFOPLIST_FILE = "$(SRCROOT)/NextMovie/base/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -484,6 +550,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PEW6979Z9C;
 				INFOPLIST_FILE = "$(SRCROOT)/NextMovie/base/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
