@@ -17,6 +17,11 @@
 		A330BFB521AB1CD100C445DE /* MovieListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A330BFB421AB1CD100C445DE /* MovieListTableViewController.swift */; };
 		A330BFB721AB1CE400C445DE /* MovieDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A330BFB621AB1CE400C445DE /* MovieDetailViewController.swift */; };
 		A330BFB921AB213400C445DE /* LWNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A330BFB821AB213400C445DE /* LWNavigationController.swift */; };
+		A330BFC121AB2A4300C445DE /* RequestHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A330BFC021AB2A4300C445DE /* RequestHelper.swift */; };
+		A330BFC321AB2A7E00C445DE /* ParseHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A330BFC221AB2A7E00C445DE /* ParseHelper.swift */; };
+		A330BFC521AB2AA000C445DE /* NetworkHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A330BFC421AB2AA000C445DE /* NetworkHelper.swift */; };
+		A330BFC721AB2AC300C445DE /* StoryboardHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A330BFC621AB2AC300C445DE /* StoryboardHelper.swift */; };
+		A330BFC921AB2B0200C445DE /* DateHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A330BFC821AB2B0200C445DE /* DateHelper.swift */; };
 		EA7D270DB24E3D9BC96D9C2E /* Pods_NextMovie.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4028110BCCDCD4231CB779CA /* Pods_NextMovie.framework */; };
 /* End PBXBuildFile section */
 
@@ -34,6 +39,11 @@
 		A330BFB421AB1CD100C445DE /* MovieListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListTableViewController.swift; sourceTree = "<group>"; };
 		A330BFB621AB1CE400C445DE /* MovieDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailViewController.swift; sourceTree = "<group>"; };
 		A330BFB821AB213400C445DE /* LWNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LWNavigationController.swift; sourceTree = "<group>"; };
+		A330BFC021AB2A4300C445DE /* RequestHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestHelper.swift; sourceTree = "<group>"; };
+		A330BFC221AB2A7E00C445DE /* ParseHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParseHelper.swift; sourceTree = "<group>"; };
+		A330BFC421AB2AA000C445DE /* NetworkHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkHelper.swift; sourceTree = "<group>"; };
+		A330BFC621AB2AC300C445DE /* StoryboardHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardHelper.swift; sourceTree = "<group>"; };
+		A330BFC821AB2B0200C445DE /* DateHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateHelper.swift; sourceTree = "<group>"; };
 		DC00D6838E827DB7470F721E /* Pods-NextMovie.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NextMovie.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NextMovie/Pods-NextMovie.debug.xcconfig"; sourceTree = "<group>"; };
 		EEDC8C75EC0DB8005B8D8E4E /* Pods-NextMovie.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NextMovie.release.xcconfig"; path = "Pods/Target Support Files/Pods-NextMovie/Pods-NextMovie.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -147,6 +157,11 @@
 		A330BFBF21AB249200C445DE /* helper */ = {
 			isa = PBXGroup;
 			children = (
+				A330BFC021AB2A4300C445DE /* RequestHelper.swift */,
+				A330BFC221AB2A7E00C445DE /* ParseHelper.swift */,
+				A330BFC421AB2AA000C445DE /* NetworkHelper.swift */,
+				A330BFC621AB2AC300C445DE /* StoryboardHelper.swift */,
+				A330BFC821AB2B0200C445DE /* DateHelper.swift */,
 			);
 			path = helper;
 			sourceTree = "<group>";
@@ -267,11 +282,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				A330BFB921AB213400C445DE /* LWNavigationController.swift in Sources */,
+				A330BFC521AB2AA000C445DE /* NetworkHelper.swift in Sources */,
+				A330BFC121AB2A4300C445DE /* RequestHelper.swift in Sources */,
 				A330BFB521AB1CD100C445DE /* MovieListTableViewController.swift in Sources */,
 				A330BFB721AB1CE400C445DE /* MovieDetailViewController.swift in Sources */,
+				A330BFC721AB2AC300C445DE /* StoryboardHelper.swift in Sources */,
 				A306267F21A9F188001E48AA /* SplashViewController.swift in Sources */,
 				A306267D21A9F188001E48AA /* AppDelegate.swift in Sources */,
 				A330BFB121AB1A5900C445DE /* RootViewController.swift in Sources */,
+				A330BFC921AB2B0200C445DE /* DateHelper.swift in Sources */,
+				A330BFC321AB2A7E00C445DE /* ParseHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -421,7 +441,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PEW6979Z9C;
 				INFOPLIST_FILE = "$(SRCROOT)/NextMovie/base/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.luiswolf.next-movie";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -437,7 +460,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PEW6979Z9C;
 				INFOPLIST_FILE = "$(SRCROOT)/NextMovie/base/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.luiswolf.next-movie";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
