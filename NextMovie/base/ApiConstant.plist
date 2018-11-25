@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>API_ENDPOINTS</key>
+	<dict>
+		<key>MOVIE_SEARCH</key>
+		<string>search/movie?query=:query</string>
+		<key>MOVIE_DETAIL</key>
+		<string>movie/:id</string>
+		<key>MOVIE_UPCOMING_LIST</key>
+		<string>movie/upcoming</string>
+		<key>MOVIE_GENRE_LIST</key>
+		<string>genre/movie/list</string>
+	</dict>
+	<key>POSTER_PATH</key>
+	<string>https://image.tmdb.org/t/p/w342/</string>
+	<key>BACKDROP_PATH</key>
+	<string>https://image.tmdb.org/t/p/w780/</string>
+	<key>API_KEY</key>
+	<string>1f54bd990f1cdfb230adb312546d765d</string>
+	<key>API_URL</key>
+	<string>https://api.themoviedb.org/3/</string>
+</dict>
+</plist>

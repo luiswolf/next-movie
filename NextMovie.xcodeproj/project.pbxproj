@@ -22,6 +22,8 @@
 		A330BFC521AB2AA000C445DE /* NetworkHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A330BFC421AB2AA000C445DE /* NetworkHelper.swift */; };
 		A330BFC721AB2AC300C445DE /* StoryboardHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A330BFC621AB2AC300C445DE /* StoryboardHelper.swift */; };
 		A330BFC921AB2B0200C445DE /* DateHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A330BFC821AB2B0200C445DE /* DateHelper.swift */; };
+		A330BFCB21AB2B4600C445DE /* ApiConstant.plist in Resources */ = {isa = PBXBuildFile; fileRef = A330BFCA21AB2B4600C445DE /* ApiConstant.plist */; };
+		A330BFCD21AB2CED00C445DE /* ApiHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A330BFCC21AB2CED00C445DE /* ApiHelper.swift */; };
 		EA7D270DB24E3D9BC96D9C2E /* Pods_NextMovie.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4028110BCCDCD4231CB779CA /* Pods_NextMovie.framework */; };
 /* End PBXBuildFile section */
 
@@ -44,6 +46,8 @@
 		A330BFC421AB2AA000C445DE /* NetworkHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkHelper.swift; sourceTree = "<group>"; };
 		A330BFC621AB2AC300C445DE /* StoryboardHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardHelper.swift; sourceTree = "<group>"; };
 		A330BFC821AB2B0200C445DE /* DateHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateHelper.swift; sourceTree = "<group>"; };
+		A330BFCA21AB2B4600C445DE /* ApiConstant.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = ApiConstant.plist; sourceTree = "<group>"; };
+		A330BFCC21AB2CED00C445DE /* ApiHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiHelper.swift; sourceTree = "<group>"; };
 		DC00D6838E827DB7470F721E /* Pods-NextMovie.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NextMovie.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NextMovie/Pods-NextMovie.debug.xcconfig"; sourceTree = "<group>"; };
 		EEDC8C75EC0DB8005B8D8E4E /* Pods-NextMovie.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NextMovie.release.xcconfig"; path = "Pods/Target Support Files/Pods-NextMovie/Pods-NextMovie.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -120,11 +124,8 @@
 		A330BFBB21AB243100C445DE /* feature */ = {
 			isa = PBXGroup;
 			children = (
-				A306267E21A9F188001E48AA /* SplashViewController.swift */,
-				A306268021A9F188001E48AA /* Splash.storyboard */,
-				A330BFB221AB1C7700C445DE /* Movie.storyboard */,
-				A330BFB421AB1CD100C445DE /* MovieListTableViewController.swift */,
-				A330BFB621AB1CE400C445DE /* MovieDetailViewController.swift */,
+				A330BFCF21AB2DD900C445DE /* movie */,
+				A330BFCE21AB2DCF00C445DE /* splash */,
 			);
 			path = feature;
 			sourceTree = "<group>";
@@ -136,6 +137,7 @@
 				A306268521A9F18A001E48AA /* LaunchScreen.storyboard */,
 				A306268821A9F18A001E48AA /* Info.plist */,
 				A330BFB021AB1A5900C445DE /* RootViewController.swift */,
+				A330BFCA21AB2B4600C445DE /* ApiConstant.plist */,
 			);
 			path = base;
 			sourceTree = "<group>";
@@ -157,13 +159,33 @@
 		A330BFBF21AB249200C445DE /* helper */ = {
 			isa = PBXGroup;
 			children = (
-				A330BFC021AB2A4300C445DE /* RequestHelper.swift */,
-				A330BFC221AB2A7E00C445DE /* ParseHelper.swift */,
-				A330BFC421AB2AA000C445DE /* NetworkHelper.swift */,
-				A330BFC621AB2AC300C445DE /* StoryboardHelper.swift */,
+				A330BFCC21AB2CED00C445DE /* ApiHelper.swift */,
 				A330BFC821AB2B0200C445DE /* DateHelper.swift */,
+				A330BFC421AB2AA000C445DE /* NetworkHelper.swift */,
+				A330BFC221AB2A7E00C445DE /* ParseHelper.swift */,
+				A330BFC021AB2A4300C445DE /* RequestHelper.swift */,
+				A330BFC621AB2AC300C445DE /* StoryboardHelper.swift */,
 			);
 			path = helper;
+			sourceTree = "<group>";
+		};
+		A330BFCE21AB2DCF00C445DE /* splash */ = {
+			isa = PBXGroup;
+			children = (
+				A306267E21A9F188001E48AA /* SplashViewController.swift */,
+				A306268021A9F188001E48AA /* Splash.storyboard */,
+			);
+			path = splash;
+			sourceTree = "<group>";
+		};
+		A330BFCF21AB2DD900C445DE /* movie */ = {
+			isa = PBXGroup;
+			children = (
+				A330BFB221AB1C7700C445DE /* Movie.storyboard */,
+				A330BFB421AB1CD100C445DE /* MovieListTableViewController.swift */,
+				A330BFB621AB1CE400C445DE /* MovieDetailViewController.swift */,
+			);
+			path = movie;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -229,6 +251,7 @@
 				A306268721A9F18A001E48AA /* LaunchScreen.storyboard in Resources */,
 				A306268421A9F18A001E48AA /* Assets.xcassets in Resources */,
 				A306268221A9F188001E48AA /* Splash.storyboard in Resources */,
+				A330BFCB21AB2B4600C445DE /* ApiConstant.plist in Resources */,
 				A330BFB321AB1C7700C445DE /* Movie.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -281,6 +304,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A330BFCD21AB2CED00C445DE /* ApiHelper.swift in Sources */,
 				A330BFB921AB213400C445DE /* LWNavigationController.swift in Sources */,
 				A330BFC521AB2AA000C445DE /* NetworkHelper.swift in Sources */,
 				A330BFC121AB2A4300C445DE /* RequestHelper.swift in Sources */,
