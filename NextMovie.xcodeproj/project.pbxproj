@@ -36,6 +36,9 @@
 		A330BFEA21AB393100C445DE /* SF-Pro-Display-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = A330BFE721AB393000C445DE /* SF-Pro-Display-Regular.otf */; };
 		A330BFEB21AB393100C445DE /* SF-Pro-Text-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = A330BFE821AB393000C445DE /* SF-Pro-Text-Semibold.otf */; };
 		A330BFEC21AB393100C445DE /* SF-Pro-Text-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = A330BFE921AB393100C445DE /* SF-Pro-Text-Regular.otf */; };
+		A330BFEE21AB3A4500C445DE /* MovieService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A330BFED21AB3A4500C445DE /* MovieService.swift */; };
+		A330BFF021AB3AF700C445DE /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = A330BFEF21AB3AF700C445DE /* Movie.swift */; };
+		A330BFF221AB3B8200C445DE /* Genre.swift in Sources */ = {isa = PBXBuildFile; fileRef = A330BFF121AB3B8200C445DE /* Genre.swift */; };
 		EA7D270DB24E3D9BC96D9C2E /* Pods_NextMovie.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4028110BCCDCD4231CB779CA /* Pods_NextMovie.framework */; };
 /* End PBXBuildFile section */
 
@@ -72,6 +75,9 @@
 		A330BFE721AB393000C445DE /* SF-Pro-Display-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Regular.otf"; sourceTree = "<group>"; };
 		A330BFE821AB393000C445DE /* SF-Pro-Text-Semibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-Semibold.otf"; sourceTree = "<group>"; };
 		A330BFE921AB393100C445DE /* SF-Pro-Text-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-Regular.otf"; sourceTree = "<group>"; };
+		A330BFED21AB3A4500C445DE /* MovieService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieService.swift; sourceTree = "<group>"; };
+		A330BFEF21AB3AF700C445DE /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
+		A330BFF121AB3B8200C445DE /* Genre.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Genre.swift; sourceTree = "<group>"; };
 		DC00D6838E827DB7470F721E /* Pods-NextMovie.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NextMovie.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NextMovie/Pods-NextMovie.debug.xcconfig"; sourceTree = "<group>"; };
 		EEDC8C75EC0DB8005B8D8E4E /* Pods-NextMovie.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NextMovie.release.xcconfig"; path = "Pods/Target Support Files/Pods-NextMovie/Pods-NextMovie.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -166,11 +172,11 @@
 		A330BFBC21AB246500C445DE /* base */ = {
 			isa = PBXGroup;
 			children = (
+				A330BFCA21AB2B4600C445DE /* ApiConstant.plist */,
+				A306268821A9F18A001E48AA /* Info.plist */,
 				A306267C21A9F188001E48AA /* AppDelegate.swift */,
 				A306268521A9F18A001E48AA /* LaunchScreen.storyboard */,
-				A306268821A9F18A001E48AA /* Info.plist */,
 				A330BFB021AB1A5900C445DE /* RootViewController.swift */,
-				A330BFCA21AB2B4600C445DE /* ApiConstant.plist */,
 			);
 			path = base;
 			sourceTree = "<group>";
@@ -178,6 +184,8 @@
 		A330BFBD21AB248200C445DE /* model */ = {
 			isa = PBXGroup;
 			children = (
+				A330BFEF21AB3AF700C445DE /* Movie.swift */,
+				A330BFF121AB3B8200C445DE /* Genre.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -185,6 +193,7 @@
 		A330BFBE21AB248700C445DE /* service */ = {
 			isa = PBXGroup;
 			children = (
+				A330BFED21AB3A4500C445DE /* MovieService.swift */,
 			);
 			path = service;
 			sourceTree = "<group>";
@@ -363,10 +372,12 @@
 			files = (
 				A330BFD721AB37DE00C445DE /* LWTableViewController.swift in Sources */,
 				A330BFD821AB37DE00C445DE /* LWContainerViewProtocol.swift in Sources */,
+				A330BFF221AB3B8200C445DE /* Genre.swift in Sources */,
 				A330BFCD21AB2CED00C445DE /* ApiHelper.swift in Sources */,
 				A330BFB921AB213400C445DE /* LWNavigationController.swift in Sources */,
 				A330BFDB21AB380700C445DE /* ErrorView.swift in Sources */,
 				A330BFC521AB2AA000C445DE /* NetworkHelper.swift in Sources */,
+				A330BFEE21AB3A4500C445DE /* MovieService.swift in Sources */,
 				A330BFC121AB2A4300C445DE /* RequestHelper.swift in Sources */,
 				A330BFB521AB1CD100C445DE /* MovieListTableViewController.swift in Sources */,
 				A330BFB721AB1CE400C445DE /* MovieDetailViewController.swift in Sources */,
@@ -380,6 +391,7 @@
 				A330BFDA21AB37DE00C445DE /* LWViewControllerProtocol.swift in Sources */,
 				A330BFE021AB38D600C445DE /* UIImage.swift in Sources */,
 				A330BFC921AB2B0200C445DE /* DateHelper.swift in Sources */,
+				A330BFF021AB3AF700C445DE /* Movie.swift in Sources */,
 				A330BFC321AB2A7E00C445DE /* ParseHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
