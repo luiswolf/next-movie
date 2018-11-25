@@ -17,9 +17,11 @@
 		A330BFB521AB1CD100C445DE /* MovieListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A330BFB421AB1CD100C445DE /* MovieListTableViewController.swift */; };
 		A330BFB721AB1CE400C445DE /* MovieDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A330BFB621AB1CE400C445DE /* MovieDetailViewController.swift */; };
 		A330BFB921AB213400C445DE /* LWNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A330BFB821AB213400C445DE /* LWNavigationController.swift */; };
+		EA7D270DB24E3D9BC96D9C2E /* Pods_NextMovie.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4028110BCCDCD4231CB779CA /* Pods_NextMovie.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4028110BCCDCD4231CB779CA /* Pods_NextMovie.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NextMovie.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A306267921A9F188001E48AA /* NextMovie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NextMovie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A306267C21A9F188001E48AA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A306267E21A9F188001E48AA /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
@@ -32,6 +34,8 @@
 		A330BFB421AB1CD100C445DE /* MovieListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListTableViewController.swift; sourceTree = "<group>"; };
 		A330BFB621AB1CE400C445DE /* MovieDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailViewController.swift; sourceTree = "<group>"; };
 		A330BFB821AB213400C445DE /* LWNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LWNavigationController.swift; sourceTree = "<group>"; };
+		DC00D6838E827DB7470F721E /* Pods-NextMovie.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NextMovie.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NextMovie/Pods-NextMovie.debug.xcconfig"; sourceTree = "<group>"; };
+		EEDC8C75EC0DB8005B8D8E4E /* Pods-NextMovie.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NextMovie.release.xcconfig"; path = "Pods/Target Support Files/Pods-NextMovie/Pods-NextMovie.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,17 +43,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA7D270DB24E3D9BC96D9C2E /* Pods_NextMovie.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		24D3D876A8CA5B59DA39EFF4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4028110BCCDCD4231CB779CA /* Pods_NextMovie.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7120E1E02B41AB22332FE8B3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DC00D6838E827DB7470F721E /* Pods-NextMovie.debug.xcconfig */,
+				EEDC8C75EC0DB8005B8D8E4E /* Pods-NextMovie.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		A306267021A9F188001E48AA = {
 			isa = PBXGroup;
 			children = (
 				A306267B21A9F188001E48AA /* NextMovie */,
 				A306267A21A9F188001E48AA /* Products */,
+				7120E1E02B41AB22332FE8B3 /* Pods */,
+				24D3D876A8CA5B59DA39EFF4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -134,9 +158,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A306268B21A9F18A001E48AA /* Build configuration list for PBXNativeTarget "NextMovie" */;
 			buildPhases = (
+				72831D26185396B7FBA61E53 /* [CP] Check Pods Manifest.lock */,
 				A306267521A9F188001E48AA /* Sources */,
 				A306267621A9F188001E48AA /* Frameworks */,
 				A306267721A9F188001E48AA /* Resources */,
+				48C01B962DE7B15BB74540EA /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -193,6 +219,47 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		48C01B962DE7B15BB74540EA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-NextMovie/Pods-NextMovie-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NextMovie/Pods-NextMovie-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		72831D26185396B7FBA61E53 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NextMovie-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		A306267521A9F188001E48AA /* Sources */ = {
@@ -348,15 +415,13 @@
 		};
 		A306268C21A9F18A001E48AA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DC00D6838E827DB7470F721E /* Pods-NextMovie.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PEW6979Z9C;
 				INFOPLIST_FILE = "$(SRCROOT)/NextMovie/base/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.luiswolf.next-movie";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -366,15 +431,13 @@
 		};
 		A306268D21A9F18A001E48AA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EEDC8C75EC0DB8005B8D8E4E /* Pods-NextMovie.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PEW6979Z9C;
 				INFOPLIST_FILE = "$(SRCROOT)/NextMovie/base/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.luiswolf.next-movie";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
