@@ -8,11 +8,16 @@
 
 import UIKit
 
-class SplashViewController: UIViewController {
+class SplashViewController: LWViewController {
 
+    var viewModel = SplashViewModel()
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        viewModel.delegate = self
+        getData()
+        
+        /*
         let service = MovieService()
         service.getList(atPage: 1) { response in
             if response.success, let movieList = response.data?.movies {
@@ -41,21 +46,50 @@ class SplashViewController: UIViewController {
                 }
             }
         }
-        
-//        print(ApiHelper.get(endpoint: .movieList, withPage: 1))
-//        print(ApiHelper.get(endpoint: .movieDetail))
-//        print(ApiHelper.get(endpoint: .movieGenreList))
-//        print(ApiHelper.get(endpoint: .movieSearch, withPage: 1))
-//        print(ApiHelper.getPosterPath())
-//        print(ApiHelper.getBackdropPath())
-//        print("LOADING CONTENT")
-//        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
-//            print("REDIRECTING")
-//            AppDelegate.shared.rootViewController.switchToMovie()
-//        }
+ */
         
     }
-
-
 }
 
+// MARK: - UI Helper
+extension SplashViewController {
+    fileprivate func getData() {
+        viewModel.getGenreList()
+    }
+    fileprivate func errorAction(isOffline: Bool, message: String? = nil) {
+        errorView.isOffline = isOffline
+        if let message = message {
+            errorView.message = message
+        }
+        errorView.delegate = self
+        showError()
+    }
+    func successAction() {
+        guard viewModel.genreList != nil else {
+            errorAction(isOffline: false)
+            return
+        }
+        AppDelegate.shared.rootViewController.switchToMovie()
+    }
+}
+
+// MARK: - IB Actions
+extension SplashViewController: ErrorViewDelegate {
+    func didPressRetryButton() {
+        hideError()
+        getData()
+    }
+}
+
+// MARK: - SplashViewModel Delegate
+extension SplashViewController: SplashViewModelDelegate {
+    func didGetGenreList() {
+        successAction()
+    }
+    func didFailWith(errorMessage: String) {
+        errorAction(isOffline: false)
+    }
+    func didFailWithNoConnection() {
+        errorAction(isOffline: true)
+    }
+}

@@ -39,6 +39,9 @@
 		A330BFEE21AB3A4500C445DE /* MovieService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A330BFED21AB3A4500C445DE /* MovieService.swift */; };
 		A330BFF021AB3AF700C445DE /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = A330BFEF21AB3AF700C445DE /* Movie.swift */; };
 		A330BFF221AB3B8200C445DE /* Genre.swift in Sources */ = {isa = PBXBuildFile; fileRef = A330BFF121AB3B8200C445DE /* Genre.swift */; };
+		A3CFBAEC21ACB49200CC46DB /* SplashViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3CFBAEB21ACB49200CC46DB /* SplashViewModel.swift */; };
+		A3CFBAEE21ACBE8700CC46DB /* LWLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3CFBAED21ACBE8700CC46DB /* LWLabel.swift */; };
+		A3CFBAF021ACD3C700CC46DB /* CacheHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3CFBAEF21ACD3C700CC46DB /* CacheHelper.swift */; };
 		EA7D270DB24E3D9BC96D9C2E /* Pods_NextMovie.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4028110BCCDCD4231CB779CA /* Pods_NextMovie.framework */; };
 /* End PBXBuildFile section */
 
@@ -78,6 +81,9 @@
 		A330BFED21AB3A4500C445DE /* MovieService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieService.swift; sourceTree = "<group>"; };
 		A330BFEF21AB3AF700C445DE /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		A330BFF121AB3B8200C445DE /* Genre.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Genre.swift; sourceTree = "<group>"; };
+		A3CFBAEB21ACB49200CC46DB /* SplashViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewModel.swift; sourceTree = "<group>"; };
+		A3CFBAED21ACBE8700CC46DB /* LWLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LWLabel.swift; sourceTree = "<group>"; };
+		A3CFBAEF21ACD3C700CC46DB /* CacheHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheHelper.swift; sourceTree = "<group>"; };
 		DC00D6838E827DB7470F721E /* Pods-NextMovie.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NextMovie.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NextMovie/Pods-NextMovie.debug.xcconfig"; sourceTree = "<group>"; };
 		EEDC8C75EC0DB8005B8D8E4E /* Pods-NextMovie.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NextMovie.release.xcconfig"; path = "Pods/Target Support Files/Pods-NextMovie/Pods-NextMovie.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -156,6 +162,7 @@
 				A330BFDF21AB38D500C445DE /* UIColor.swift */,
 				A330BFDE21AB38D500C445DE /* UIFont.swift */,
 				A330BFDD21AB38D500C445DE /* UIImage.swift */,
+				A3CFBAED21ACBE8700CC46DB /* LWLabel.swift */,
 			);
 			path = extension;
 			sourceTree = "<group>";
@@ -207,6 +214,7 @@
 				A330BFC221AB2A7E00C445DE /* ParseHelper.swift */,
 				A330BFC021AB2A4300C445DE /* RequestHelper.swift */,
 				A330BFC621AB2AC300C445DE /* StoryboardHelper.swift */,
+				A3CFBAEF21ACD3C700CC46DB /* CacheHelper.swift */,
 			);
 			path = helper;
 			sourceTree = "<group>";
@@ -214,6 +222,7 @@
 		A330BFCE21AB2DCF00C445DE /* splash */ = {
 			isa = PBXGroup;
 			children = (
+				A3CFBAEA21ACB48000CC46DB /* view-model */,
 				A306267E21A9F188001E48AA /* SplashViewController.swift */,
 				A306268021A9F188001E48AA /* Splash.storyboard */,
 			);
@@ -248,6 +257,14 @@
 			);
 			name = font;
 			path = "New Group";
+			sourceTree = "<group>";
+		};
+		A3CFBAEA21ACB48000CC46DB /* view-model */ = {
+			isa = PBXGroup;
+			children = (
+				A3CFBAEB21ACB49200CC46DB /* SplashViewModel.swift */,
+			);
+			path = "view-model";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -385,11 +402,14 @@
 				A330BFC721AB2AC300C445DE /* StoryboardHelper.swift in Sources */,
 				A330BFE121AB38D600C445DE /* UIFont.swift in Sources */,
 				A306267F21A9F188001E48AA /* SplashViewController.swift in Sources */,
+				A3CFBAEC21ACB49200CC46DB /* SplashViewModel.swift in Sources */,
 				A306267D21A9F188001E48AA /* AppDelegate.swift in Sources */,
 				A330BFB121AB1A5900C445DE /* RootViewController.swift in Sources */,
 				A330BFD921AB37DE00C445DE /* LWViewController.swift in Sources */,
 				A330BFDA21AB37DE00C445DE /* LWViewControllerProtocol.swift in Sources */,
+				A3CFBAF021ACD3C700CC46DB /* CacheHelper.swift in Sources */,
 				A330BFE021AB38D600C445DE /* UIImage.swift in Sources */,
+				A3CFBAEE21ACBE8700CC46DB /* LWLabel.swift in Sources */,
 				A330BFC921AB2B0200C445DE /* DateHelper.swift in Sources */,
 				A330BFF021AB3AF700C445DE /* Movie.swift in Sources */,
 				A330BFC321AB2A7E00C445DE /* ParseHelper.swift in Sources */,

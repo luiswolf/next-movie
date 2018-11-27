@@ -20,7 +20,7 @@ class ErrorView: UIView {
     @IBOutlet weak var iconImageView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var messageLabel: UILabel!
-    @IBInspectable var message: String! = "Tente novamente mais tarde" {
+    @IBInspectable var message: String! = "An unexpected error has occurred. Please try again later on." {
         didSet {
             messageLabel?.text = message
         }
@@ -29,10 +29,12 @@ class ErrorView: UIView {
         didSet {
             if isOffline {
                 iconImageView?.image = UIImage(named: "gear")
-                titleLabel?.text = "Sem conexão"
+                titleLabel?.text = "No connection"
+                message = "You're offline. Please check your internet connection."
             } else {
                 iconImageView?.image = UIImage(named: "gear")
-                titleLabel?.text = "Atenção"
+                titleLabel?.text = "Notice"
+                message = "An unexpected error has occurred. Please try again later on."
             }
         }
     }

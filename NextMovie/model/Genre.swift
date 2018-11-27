@@ -13,9 +13,21 @@ struct GenreWrapper: Mappable {
     var genres: [Genre] = [Genre]()
     
     init?(map: Map) {}
+    init(genres: [Genre]) {
+        self.genres = genres
+    }
     
     mutating func mapping(map: Map) {
         genres <- map["genres"]
+    }
+    
+    func get(byId id: Int) -> Genre? {
+        for genre in genres {
+            if id == genre.id {
+                return genre
+            }
+        }
+        return nil
     }
 }
 
@@ -29,4 +41,5 @@ struct Genre: Mappable {
         id <- map["id"]
         name <- map["name"]
     }
+    
 }
