@@ -10,14 +10,14 @@ import UIKit
 
 class MovieDetailViewController: UIViewController {
 
-    var detailItem: String?
+    var movie: Movie?
     @IBOutlet weak var detailLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        if let detailItem = detailItem {
-            detailLabel.text = detailItem
+        if let movie = movie {
+            detailLabel.text = movie.title
         }
     }
     

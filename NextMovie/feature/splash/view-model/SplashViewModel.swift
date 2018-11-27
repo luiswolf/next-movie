@@ -45,13 +45,4 @@ class SplashViewModel: NSObject {
             }
         }
     }
-    
-//    func getSectionTitle(forSortingOption sortingOption: EventService.EventListSortType) -> String {
-//        switch sortingOption {
-//        case let .date(order):
-//            return "ordenados por data (\(order == .asc ? "a - z" : "z - a"))"
-//        case let .title(order):
-//            return "ordenados por título (\(order == .asc ? "a - z" : "z - a"))"
-//        }
-//    }
 }

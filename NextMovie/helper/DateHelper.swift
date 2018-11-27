@@ -19,4 +19,10 @@ class DateHelper {
             formatter.locale = Locale(identifier: locale)
         }
     }
+    
+    func getFormattedDate(from date: Date) -> String {
+        formatter.dateStyle = .short
+        formatter.timeStyle = .none
+        return formatter.string(from: date)
+    }
 }
