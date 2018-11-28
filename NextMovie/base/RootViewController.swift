@@ -62,6 +62,7 @@ extension RootViewController: UISplitViewControllerDelegate {
         }
         return false
     }
+    
     func splitViewController(_ splitViewController: UISplitViewController, showDetail vc: UIViewController, sender: Any?) -> Bool {
         if splitViewController.isCollapsed, let navController = vc as? UINavigationController {
             if let detailVC = navController.topViewController {
@@ -71,6 +72,7 @@ extension RootViewController: UISplitViewControllerDelegate {
         }
         return false
     }
+    
     func splitViewController(_ splitViewController: UISplitViewController, separateSecondaryFrom primaryViewController: UIViewController) -> UIViewController? {
         let controllers = splitViewController.viewControllers
         
@@ -78,13 +80,10 @@ extension RootViewController: UISplitViewControllerDelegate {
             if let detailViewController = navController.topViewController as? MovieDetailViewController {
                 navController.popViewController(animated: false)
                 let detailNavController = UINavigationController(rootViewController: detailViewController)
-                if #available(iOS 11.0, *) {
-                    detailNavController.navigationBar.prefersLargeTitles = true
-                }
                 return detailNavController
             }
             else if let _ = navController.topViewController as? MovieListTableViewController {
-                let storyboard = UIStoryboard(name: "Event", bundle: nil)
+                let storyboard = UIStoryboard(name: "Movie", bundle: nil)
                 if let detailNavController = storyboard.instantiateViewController(withIdentifier: "MovieListNavigationController") as? UINavigationController {
                     if let detailViewController = detailNavController.topViewController as? MovieDetailViewController {
                         detailViewController.navigationItem.leftBarButtonItem = splitViewController.displayModeButtonItem

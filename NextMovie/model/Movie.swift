@@ -24,6 +24,7 @@ struct Movie: Mappable {
     var title: String = ""
     var originalTitle: String = ""
     var popularity: Double = 0.0
+    var voteCount: Int = 0
     var posterPath: String = ""
     var backdropPath: String = ""
     var overview: String = ""
@@ -38,10 +39,21 @@ struct Movie: Mappable {
         title <- map["title"]
         originalTitle <- map["original_title"]
         popularity <- map["popularity"]
+        voteCount <- map["vote_count"]
         posterPath <- map["poster_path"]
         backdropPath <- map["backdrop_path"]
         overview <- map["overview"]
-        releaseDate <- map["release_date"]
-        genres <- map["genre_ids"]
+        releaseDate <- (map["release_date"], DateFormatTransform())
+        if let genreIds = map.JSON["genre_ids"] as? [Int], let sharedGenreList = CacheHelper.sharedInstance.genreList {
+            var genreList = [Genre]()
+            for genreId in genreIds {
+                if let genre = sharedGenreList.get(byId: genreId) {
+                    genreList.append(genre)
+                }
+            }
+            genres = genreList
+        } else {
+            genres <- map["genres"]
+        }
     }
 }

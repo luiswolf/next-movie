@@ -16,38 +16,6 @@ class SplashViewController: LWViewController {
         
         viewModel.delegate = self
         getData()
-        
-        /*
-        let service = MovieService()
-        service.getList(atPage: 1) { response in
-            if response.success, let movieList = response.data?.movies {
-                for movie in movieList {
-                    print(movie.title)
-                }
-            }
-        }
-        service.getDetail(withId: 360920) { response in
-            if response.success, let movie = response.data {
-                print(movie.title)
-            }
-        }
-        service.getGenres { response in
-            if response.success, let genreList = response.data?.genres {
-                for genre in genreList {
-                    print(genre.name)
-                }
-            }
-        }
-        service.search(for: "Reprisa", withPage: 1) { response in
-            if response.success, let movieList = response.data?.movies {
-                for movie in movieList {
-                    print(movie.title)
-                    print(movie.overview)
-                }
-            }
-        }
- */
-        
     }
 }
 

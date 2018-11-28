@@ -24,6 +24,7 @@ class MovieService: NSObject {
     func getDetail(withId id: Int, andReturnTo callback: @escaping ((ResponseDTO<Movie>) -> Void)) {
         guard var url = ApiHelper.get(endpoint: .movieDetail) else { return }
         url = url.replacingOccurrences(of: ":id", with: String(id))
+        print(url)
         self.requestHelper.get(type: Movie.self, fromUrl: url, andReturnTo: callback)
     }
     

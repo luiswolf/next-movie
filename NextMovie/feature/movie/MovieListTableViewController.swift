@@ -20,13 +20,15 @@ class MovieListTableViewController: LWTableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        if let info = Bundle.main.infoDictionary, let appName = info["CFBundleDisplayName"] as? String {
+            title = appName
+        }
         
         if let split = splitViewController {
             split.preferredDisplayMode = .allVisible
             let controllers = split.viewControllers
             detailViewController = (controllers[controllers.count-1] as! UINavigationController).topViewController as? MovieDetailViewController
         }
-        
         viewModel.delegate = self
         getData()
     }
@@ -100,11 +102,6 @@ extension MovieListTableViewController {
             case .loading:
                 // TODO: loading cell
                 return UITableViewCell()
-        }
-    }
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        DispatchQueue.main.async {
-            self.performSegue(withIdentifier: self.goToDetailIdentifier, sender: nil)
         }
     }
 }
