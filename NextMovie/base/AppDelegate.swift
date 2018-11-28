@@ -15,6 +15,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.rootViewController = RootViewController()
         window?.makeKeyAndVisible()
+        AppDelegate.configureMainAppearance()
         return true
     }
 }
@@ -25,5 +26,15 @@ extension AppDelegate {
     }
     var rootViewController: RootViewController {
         return window!.rootViewController as! RootViewController
+    }
+}
+
+extension AppDelegate {
+    fileprivate static func configureMainAppearance() {
+        UINavigationBar.appearance().barTintColor = UIColor.white.withAlphaComponent(0.5)
+        UINavigationBar.appearance().tintColor = UIColor.black.withAlphaComponent(0.8)
+        UINavigationBar.appearance().titleTextAttributes = [
+            .foregroundColor : UIColor.black.withAlphaComponent(0.8)
+        ]
     }
 }

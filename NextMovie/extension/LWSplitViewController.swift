@@ -14,14 +14,14 @@ class LWSplitViewController: UISplitViewController {
         super.viewDidLoad()
     }
     
-    override var traitCollection: UITraitCollection {
-        if (UIDevice.current.userInterfaceIdiom == .pad) {
-            return super.traitCollection
-        } else {
-            let horizontal = UITraitCollection(horizontalSizeClass: .compact)
-            let vertical = UITraitCollection(verticalSizeClass: super.traitCollection.verticalSizeClass)
-            return UITraitCollection.init(traitsFrom: [horizontal, vertical])
-        }
-    }
+//    override var traitCollection: UITraitCollection {
+//        if UIDevice.current.userInterfaceIdiom == .pad {
+//            return super.traitCollection
+//        } else {
+//            let horizontal = UITraitCollection(horizontalSizeClass: .compact)
+//            let vertical = UITraitCollection(verticalSizeClass: super.traitCollection.verticalSizeClass)
+//            return UITraitCollection.init(traitsFrom: [horizontal, vertical])
+//        }
+//    }
 
 }

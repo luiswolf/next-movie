@@ -105,6 +105,7 @@
 		A3B08C2621AE48F9007C8338 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Movie.storyboard; sourceTree = "<group>"; };
 		A3B08C2921AE48FF007C8338 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Movie.strings; sourceTree = "<group>"; };
 		A3B08C2B21AE4902007C8338 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Movie.strings"; sourceTree = "<group>"; };
+		A3B08C2D21AEC7BE007C8338 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Splash.strings; sourceTree = "<group>"; };
 		A3CFBAEB21ACB49200CC46DB /* SplashViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewModel.swift; sourceTree = "<group>"; };
 		A3CFBAED21ACBE8700CC46DB /* LWLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LWLabel.swift; sourceTree = "<group>"; };
 		A3CFBAEF21ACD3C700CC46DB /* CacheHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheHelper.swift; sourceTree = "<group>"; };
@@ -486,6 +487,7 @@
 			children = (
 				A306268121A9F188001E48AA /* Base */,
 				A3B08C2021AE482A007C8338 /* pt-BR */,
+				A3B08C2D21AEC7BE007C8338 /* en */,
 			);
 			name = Splash.storyboard;
 			sourceTree = "<group>";

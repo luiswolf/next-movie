@@ -42,9 +42,20 @@ class RootViewController: UIViewController {
         splitViewController.delegate = self
         
         addChild(splitViewController)
+        
+        // overriding trait for iphone 8+, XR, XR Max
+        var trait : UITraitCollection?
+        if UIDevice.current.userInterfaceIdiom == .pad {
+            trait = super.traitCollection
+        } else {
+            let horizontal = UITraitCollection(horizontalSizeClass: .compact)
+            trait = UITraitCollection.init(traitsFrom: [horizontal])
+        }
+        
         splitViewController.view.frame = view.bounds
         view.addSubview(splitViewController.view)
         splitViewController.didMove(toParent: self)
+        setOverrideTraitCollection(trait, forChild: splitViewController)
         current.willMove(toParent: nil)
         current.view.removeFromSuperview()
         current.removeFromParent()
@@ -84,7 +95,7 @@ extension RootViewController: UISplitViewControllerDelegate {
             }
             else if let _ = navController.topViewController as? MovieListTableViewController {
                 let storyboard = UIStoryboard(name: "Movie", bundle: nil)
-                if let detailNavController = storyboard.instantiateViewController(withIdentifier: "MovieListNavigationController") as? UINavigationController {
+                if let detailNavController = storyboard.instantiateViewController(withIdentifier: "MovieListNavigationController") as? LWNavigationController {
                     if let detailViewController = detailNavController.topViewController as? MovieDetailViewController {
                         detailViewController.navigationItem.leftBarButtonItem = splitViewController.displayModeButtonItem
                         detailViewController.navigationItem.leftItemsSupplementBackButton = true

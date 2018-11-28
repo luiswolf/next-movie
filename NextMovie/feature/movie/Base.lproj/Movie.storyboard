@@ -144,10 +144,10 @@
             </objects>
             <point key="canvasLocation" x="-966" y="-306"/>
         </scene>
-        <!--asd-->
+        <!--Navigation Controller-->
         <scene sceneID="23z-S7-Mtf">
             <objects>
-                <navigationController title="asd" automaticallyAdjustsScrollViewInsets="NO" id="RdI-tt-0yg" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="RdI-tt-0yg" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="TLI-uS-JXk">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
@@ -219,8 +219,8 @@
                                         <variation key="default">
                                             <mask key="constraints">
                                                 <exclude reference="PGp-Or-hF9"/>
-                                                <exclude reference="jZc-Tn-oAD"/>
                                                 <exclude reference="7AT-gc-3wa"/>
+                                                <exclude reference="jZc-Tn-oAD"/>
                                             </mask>
                                         </variation>
                                         <variation key="heightClass=compact">
@@ -229,13 +229,13 @@
                                             </mask>
                                             <mask key="constraints">
                                                 <exclude reference="QZf-rn-PFV"/>
-                                                <exclude reference="qTQ-Vb-g5X"/>
-                                                <include reference="PGp-Or-hF9"/>
                                                 <exclude reference="02n-GP-lrL"/>
-                                                <include reference="jZc-Tn-oAD"/>
+                                                <include reference="PGp-Or-hF9"/>
+                                                <exclude reference="qTQ-Vb-g5X"/>
                                                 <include reference="7AT-gc-3wa"/>
-                                                <exclude reference="sB5-qa-Ixj"/>
                                                 <exclude reference="T65-fU-qjq"/>
+                                                <include reference="jZc-Tn-oAD"/>
+                                                <exclude reference="sB5-qa-Ixj"/>
                                             </mask>
                                         </variation>
                                     </view>
@@ -317,7 +317,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="eSs-hy-fVN">
-                                                    <rect key="frame" x="16" y="5" width="32" height="20"/>
+                                                    <rect key="frame" x="16" y="5" width="35" height="20.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="17"/>
@@ -325,7 +325,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Detail" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="2du-8D-8ig">
-                                                    <rect key="frame" x="16" y="25" width="30.5" height="14"/>
+                                                    <rect key="frame" x="16" y="25.5" width="33" height="14.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="12"/>
