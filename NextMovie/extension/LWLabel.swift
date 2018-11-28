@@ -12,6 +12,7 @@ import UIKit
 class LWLabel: UILabel {
     fileprivate var fontName: UIFont = UIFont.text
     
+    @IBInspectable
     var fontColor: UIColor = UIColor.black {
         didSet {
             textColor = fontColor

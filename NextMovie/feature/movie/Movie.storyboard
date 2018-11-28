@@ -24,31 +24,81 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="movieCell" textLabel="YTm-L3-cN3" detailTextLabel="B9j-BZ-avT" rowHeight="60" style="IBUITableViewCellStyleSubtitle" id="sq9-fe-k51">
-                                <rect key="frame" x="0.0" y="55.5" width="375" height="60"/>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="movieCell" id="sq9-fe-k51" customClass="MovieTableViewCell" customModule="NextMovie" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="55.5" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="sq9-fe-k51" id="jul-CA-pPP">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="59.5"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="sq9-fe-k51" id="jul-CA-pPP">
+                                    <rect key="frame" x="0.0" y="0.0" width="341" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="YTm-L3-cN3">
-                                            <rect key="frame" x="16" y="10" width="33.5" height="20.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="B9j-BZ-avT">
-                                            <rect key="frame" x="16" y="33.5" width="44" height="14.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="XJ9-T7-mir">
+                                            <rect key="frame" x="16" y="11" width="70" height="100"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="70" id="NWv-YJ-il3"/>
+                                                <constraint firstAttribute="height" constant="100" id="sIi-30-EQt"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hfQ-Fd-LNK" customClass="LWLabel" customModule="NextMovie" customModuleProvider="target">
+                                            <rect key="frame" x="102" y="19" width="215" height="17"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="boolean" keyPath="isDisplay" value="NO"/>
+                                                <userDefinedRuntimeAttribute type="boolean" keyPath="isBold" value="YES"/>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="fontColor">
+                                                    <color key="value" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DZ3-CM-dL6" customClass="LWLabel" customModule="NextMovie" customModuleProvider="target">
+                                            <rect key="frame" x="102" y="38" width="215" height="14.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="boolean" keyPath="isBold" value="NO"/>
+                                                <userDefinedRuntimeAttribute type="boolean" keyPath="isDisplay" value="NO"/>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="fontColor">
+                                                    <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sq7-kh-Rjb" customClass="LWLabel" customModule="NextMovie" customModuleProvider="target">
+                                            <rect key="frame" x="102" y="56.5" width="215" height="14.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="boolean" keyPath="isDisplay" value="NO"/>
+                                                <userDefinedRuntimeAttribute type="boolean" keyPath="isBold" value="NO"/>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="fontColor">
+                                                    <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
                                         </label>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailingMargin" secondItem="hfQ-Fd-LNK" secondAttribute="trailing" constant="16" id="39X-NM-7g3"/>
+                                        <constraint firstItem="DZ3-CM-dL6" firstAttribute="top" secondItem="hfQ-Fd-LNK" secondAttribute="bottom" constant="2" id="4UH-pc-wQb"/>
+                                        <constraint firstItem="hfQ-Fd-LNK" firstAttribute="leading" secondItem="XJ9-T7-mir" secondAttribute="trailing" constant="16" id="D7b-br-WMa"/>
+                                        <constraint firstItem="Sq7-kh-Rjb" firstAttribute="top" secondItem="DZ3-CM-dL6" secondAttribute="bottom" constant="4" id="FJd-QY-hvF"/>
+                                        <constraint firstItem="DZ3-CM-dL6" firstAttribute="leading" secondItem="hfQ-Fd-LNK" secondAttribute="leading" id="Hzg-cf-81y"/>
+                                        <constraint firstItem="Sq7-kh-Rjb" firstAttribute="leading" secondItem="DZ3-CM-dL6" secondAttribute="leading" id="KaB-oM-jb4"/>
+                                        <constraint firstItem="hfQ-Fd-LNK" firstAttribute="top" secondItem="XJ9-T7-mir" secondAttribute="top" constant="8" id="VOf-by-s7b"/>
+                                        <constraint firstItem="XJ9-T7-mir" firstAttribute="leading" secondItem="jul-CA-pPP" secondAttribute="leadingMargin" id="a7i-Tt-qRJ"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="XJ9-T7-mir" secondAttribute="bottom" id="dGh-F0-uUO"/>
+                                        <constraint firstItem="DZ3-CM-dL6" firstAttribute="trailing" secondItem="hfQ-Fd-LNK" secondAttribute="trailing" id="dVX-a0-VgB"/>
+                                        <constraint firstItem="Sq7-kh-Rjb" firstAttribute="trailing" secondItem="DZ3-CM-dL6" secondAttribute="trailing" id="vv2-QT-QDx"/>
+                                        <constraint firstItem="XJ9-T7-mir" firstAttribute="top" secondItem="jul-CA-pPP" secondAttribute="topMargin" id="y6z-sf-6yJ"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
+                                    <outlet property="genreLabel" destination="Sq7-kh-Rjb" id="Th8-cS-7PT"/>
+                                    <outlet property="posterImageView" destination="XJ9-T7-mir" id="ceF-Ce-zXT"/>
+                                    <outlet property="releaseDateLabel" destination="DZ3-CM-dL6" id="RFS-05-kGV"/>
+                                    <outlet property="titleLabel" destination="hfQ-Fd-LNK" id="llf-jU-kwG"/>
                                     <segue destination="RdI-tt-0yg" kind="showDetail" identifier="showDetail" id="lDJ-Eu-rcz"/>
                                 </connections>
                             </tableViewCell>
@@ -63,7 +113,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RuJ-a7-gbt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="938" y="-638"/>
+            <point key="canvasLocation" x="936.79999999999995" y="-638.2308845577212"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="cHx-BD-gJ2">

@@ -14,6 +14,10 @@ class MovieListTableViewController: LWTableViewController {
     
     var detailViewController: MovieDetailViewController? = nil
     var isFirstLoad: Bool = true
+    fileprivate lazy var imageHelper: ImageHelper = {
+        let helper = ImageHelper()
+        return helper
+    }()
     
     fileprivate let goToDetailIdentifier = "showDetail"
     fileprivate let cellIdentifier = "movieCell"
@@ -93,11 +97,19 @@ extension MovieListTableViewController {
         guard let section = TableSection(rawValue: indexPath.section) else { return UITableViewCell() }
         switch section {
             case .movie:
-                let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath)
+                guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? MovieTableViewCell else { return UITableViewCell() }
                 let movie = viewModel.movieList[indexPath.row]
-                cell.textLabel?.text = movie.title
-                cell.detailTextLabel?.text = DateHelper.sharedInstance.getFormattedDate(from: movie.releaseDate)
-                cell.accessoryType = .disclosureIndicator
+                if let posterPath = viewModel.posterPath {
+                    imageHelper.getImage(withPath: posterPath + movie.posterPath) { (image) in
+                        if let image = image {
+                            cell.posterImageView.image = image
+                        }
+                    }
+                }
+                cell.titleLabel.text = movie.title
+                let genreList = Array(movie.genres.map{ $0.name })
+                cell.genreLabel.text = genreList.joined(separator: ", ")
+                cell.releaseDateLabel.text = DateHelper.sharedInstance.getFormattedDate(from: movie.releaseDate)
                 return cell
             case .loading:
                 // TODO: loading cell

@@ -16,6 +16,7 @@ class MovieListViewModel {
     var movieList = [Movie]()
     private var page: Int = 1
     var canGetData: Bool = true
+    let posterPath = ApiHelper.getPosterPath()
     
     fileprivate var service: MovieService!
     var delegate: MovieListViewModelDelegate?

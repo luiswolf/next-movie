@@ -17,11 +17,11 @@ protocol ImageHelperDelegate {
 class ImageHelper {
     let imageTypes = ["image/png", "image/jpeg"]
     
-    var delegate: ImageHelperDelegate!
+    var delegate: ImageHelperDelegate?
     
     func getImage(withPath path: String) {
         if let image = CacheHelper.sharedInstance.getImage(forKey: path) {
-            delegate.didGetImage(image: image, forPath: path)
+            delegate?.didGetImage(image: image, forPath: path)
         } else {
             // TODO: COLOCAR EM CAMADA DE SERVICO
             Alamofire.request(path)
@@ -31,12 +31,35 @@ class ImageHelper {
                     case .success:
                         if let data = response.data, let image = UIImage(data: data) {
                             CacheHelper.sharedInstance.storeImage(image, forKey: path)
-                            self.delegate.didGetImage(image: image, forPath: path)
+                            self.delegate?.didGetImage(image: image, forPath: path)
                         } else {
-                            self.delegate.didFailToGetImage(forPath: path)
+                            self.delegate?.didFailToGetImage(forPath: path)
                         }
                     case .failure:
-                        self.delegate.didFailToGetImage(forPath: path)
+                        self.delegate?.didFailToGetImage(forPath: path)
+                    }
+            }
+        }
+    }
+    
+    func getImage(withPath path: String, withCompletion completion: @escaping (UIImage?)->Void) {
+        if let image = CacheHelper.sharedInstance.getImage(forKey: path) {
+            completion(image)
+        } else {
+            // TODO: COLOCAR EM CAMADA DE SERVICO
+            Alamofire.request(path)
+                .validate(contentType: self.imageTypes)
+                .responseData { response in
+                    switch response.result {
+                    case .success:
+                        if let data = response.data, let image = UIImage(data: data) {
+                            CacheHelper.sharedInstance.storeImage(image, forKey: path)
+                            completion(image)
+                        } else {
+                            completion(nil)
+                        }
+                    case .failure:
+                        completion(nil)
                     }
             }
         }
