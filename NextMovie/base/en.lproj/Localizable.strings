@@ -13,4 +13,4 @@
 "Genre: " = "Genre: ";
 "Release date: " = "Release date: ";
 "Rating: " = "Rating: ";
-"%d (%d votes)" = "%d (%d votes)";
+"%.1f (%d votes)" = "%.1f (%d votes)";

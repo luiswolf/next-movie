@@ -91,8 +91,9 @@ extension MovieDetailTableViewController {
             string: NSLocalizedString("Rating: ", comment: "Movie's rating"),
             attributes: [.font : UIFont.textSemibold]
         )
-        let formatString = NSLocalizedString("%d (%d votes)",
+        let formatString = NSLocalizedString("%.1f (%d votes)",
                                              comment: "Movie's vote number and avarage")
+        
         rate.append(
             NSAttributedString(
                 string: String.localizedStringWithFormat(formatString, movie.voteAverage, movie.voteCount),
