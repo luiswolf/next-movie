@@ -60,7 +60,7 @@ extension MovieDetailTableViewController {
         
         // MARK: GENRE
         let genre = NSMutableAttributedString(
-            string: "Genre: ",
+            string: NSLocalizedString("Genre: ", comment: "Movie gender"),
             attributes: [.font : UIFont.textSemibold]
         )
         let genreList = Array(movie.genres.map{ $0.name })
@@ -74,7 +74,7 @@ extension MovieDetailTableViewController {
         
         // MARK: RELEASE DATE
         let releaseDate = NSMutableAttributedString(
-            string: "Release date: ",
+            string: NSLocalizedString("Release date: ", comment: "Movie's release date"),
             attributes: [.font : UIFont.textSemibold]
         )
         releaseDate.append(
@@ -86,13 +86,16 @@ extension MovieDetailTableViewController {
         releaseDateLabel.attributedText = releaseDate
         
         // MARK: RATING
+        
         let rate = NSMutableAttributedString(
-            string: "Rating: ",
+            string: NSLocalizedString("Rating: ", comment: "Movie's rating"),
             attributes: [.font : UIFont.textSemibold]
         )
+        let formatString = NSLocalizedString("%d (%d votes)",
+                                             comment: "Movie's vote number and avarage")
         rate.append(
             NSAttributedString(
-                string: "\(movie.voteAverage) (\(movie.voteCount) votes)",
+                string: String.localizedStringWithFormat(formatString, movie.voteAverage, movie.voteCount),
                 attributes: [.font : UIFont.text]
             )
         )

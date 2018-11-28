@@ -20,7 +20,7 @@ class ErrorView: UIView {
     @IBOutlet weak var iconImageView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var messageLabel: UILabel!
-    @IBInspectable var message: String! = "An unexpected error has occurred. Please try again later on." {
+    @IBInspectable var message: String! = NSLocalizedString("An unexpected error has occurred. Please try again later on.", comment: "Error view notice message") {
         didSet {
             messageLabel?.text = message
         }
@@ -29,12 +29,12 @@ class ErrorView: UIView {
         didSet {
             if isOffline {
                 iconImageView?.image = UIImage(named: "gear")
-                titleLabel?.text = "No connection"
-                message = "You're offline. Please check your internet connection."
+                titleLabel?.text = NSLocalizedString("No connection", comment: "Error view offline title")
+                message = NSLocalizedString("You're offline. Please check your internet connection.", comment: "Error view offline message")
             } else {
                 iconImageView?.image = UIImage(named: "gear")
-                titleLabel?.text = "Notice"
-                message = "An unexpected error has occurred. Please try again later on."
+                titleLabel?.text = NSLocalizedString("Notice", comment: "Error view notice title")
+                message = NSLocalizedString("An unexpected error has occurred. Please try again later on.", comment: "Error view notice message")
             }
         }
     }

@@ -73,7 +73,7 @@ extension MovieListTableViewController {
     }
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         guard let section = TableSection(rawValue: section) else { return nil }
-        if section == .movie { return "UPCOMING MOVIES" }
+        if section == .movie { return NSLocalizedString("UPCOMING MOVIES", comment: "Upcoming movies header title") }
         return nil
     }
     override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {

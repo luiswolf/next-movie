@@ -47,6 +47,7 @@
 		A3B08C1121AE2052007C8338 /* ImageHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3B08C1021AE2052007C8338 /* ImageHelper.swift */; };
 		A3B08C1321AE360C007C8338 /* DateFormatTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3B08C1221AE360C007C8338 /* DateFormatTransform.swift */; };
 		A3B08C1621AE3F2A007C8338 /* MovieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3B08C1521AE3F2A007C8338 /* MovieTableViewCell.swift */; };
+		A3B08C1E21AE4576007C8338 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A3B08C1D21AE4576007C8338 /* Localizable.strings */; };
 		A3CFBAEC21ACB49200CC46DB /* SplashViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3CFBAEB21ACB49200CC46DB /* SplashViewModel.swift */; };
 		A3CFBAEE21ACBE8700CC46DB /* LWLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3CFBAED21ACBE8700CC46DB /* LWLabel.swift */; };
 		A3CFBAF021ACD3C700CC46DB /* CacheHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3CFBAEF21ACD3C700CC46DB /* CacheHelper.swift */; };
@@ -98,6 +99,7 @@
 		A3B08C1021AE2052007C8338 /* ImageHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageHelper.swift; sourceTree = "<group>"; };
 		A3B08C1221AE360C007C8338 /* DateFormatTransform.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatTransform.swift; sourceTree = "<group>"; };
 		A3B08C1521AE3F2A007C8338 /* MovieTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTableViewCell.swift; sourceTree = "<group>"; };
+		A3B08C1D21AE4576007C8338 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		A3CFBAEB21ACB49200CC46DB /* SplashViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewModel.swift; sourceTree = "<group>"; };
 		A3CFBAED21ACBE8700CC46DB /* LWLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LWLabel.swift; sourceTree = "<group>"; };
 		A3CFBAEF21ACD3C700CC46DB /* CacheHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheHelper.swift; sourceTree = "<group>"; };
@@ -205,6 +207,7 @@
 				A306267C21A9F188001E48AA /* AppDelegate.swift */,
 				A306268521A9F18A001E48AA /* LaunchScreen.storyboard */,
 				A330BFB021AB1A5900C445DE /* RootViewController.swift */,
+				A3B08C1D21AE4576007C8338 /* Localizable.strings */,
 			);
 			path = base;
 			sourceTree = "<group>";
@@ -375,6 +378,7 @@
 				A306268221A9F188001E48AA /* Splash.storyboard in Resources */,
 				A330BFDC21AB381200C445DE /* ErrorView.xib in Resources */,
 				A330BFEB21AB393100C445DE /* SF-Pro-Text-Semibold.otf in Resources */,
+				A3B08C1E21AE4576007C8338 /* Localizable.strings in Resources */,
 				A330BFCB21AB2B4600C445DE /* ApiConstant.plist in Resources */,
 				A330BFEC21AB393100C445DE /* SF-Pro-Text-Regular.otf in Resources */,
 				A330BFEA21AB393100C445DE /* SF-Pro-Display-Regular.otf in Resources */,
