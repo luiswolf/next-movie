@@ -101,7 +101,8 @@ extension LWViewControllerProtocol where Self: LWTableViewController {
     }
     private func setConstraints(forView v: UIView) {
         if #available(iOS 11.0, *) {
-            v.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 0.0).isActive = true
+            
+            v.topAnchor.constraint(equalTo: view.topAnchor, constant: 0.0).isActive = true
             v.leftAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leftAnchor, constant: 0.0).isActive = true
             v.rightAnchor.constraint(equalTo: view.safeAreaLayoutGuide.rightAnchor, constant: 0).isActive = true
             v.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: 0).isActive = true

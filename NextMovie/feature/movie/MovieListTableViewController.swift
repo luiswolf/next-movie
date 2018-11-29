@@ -27,7 +27,7 @@ class MovieListTableViewController: LWTableViewController {
         if let info = Bundle.main.infoDictionary, let appName = info["CFBundleDisplayName"] as? String {
             title = appName
         }
-        
+        backgroundColor = .white
         if let split = splitViewController {
             split.preferredDisplayMode = .allVisible
             let controllers = split.viewControllers
@@ -112,7 +112,6 @@ extension MovieListTableViewController {
                 cell.releaseDateLabel.text = DateHelper.sharedInstance.getFormattedDate(from: movie.releaseDate)
                 return cell
             case .loading:
-                // TODO: loading cell
                 return UITableViewCell()
         }
     }
@@ -149,7 +148,6 @@ extension MovieListTableViewController {
         showError()
     }
     fileprivate func successAction() {
-        // TODO: dont reload all tableview everytime
         tableView.reloadData()
         if UIDevice.current.userInterfaceIdiom == .pad, isFirstLoad, let firstIndexPath = tableView.indexPathsForVisibleRows?.first {
             isFirstLoad = false

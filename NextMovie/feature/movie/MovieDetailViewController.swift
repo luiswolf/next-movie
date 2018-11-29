@@ -10,16 +10,28 @@ import UIKit
 
 class MovieDetailViewController: LWViewController {
     
-    var movie: Movie!
-    fileprivate var colors: UIImageColors?
-    let viewModel = MovieDetailViewModel()
-    fileprivate let isIpad = UIDevice.current.userInterfaceIdiom == .pad
-    
     @IBOutlet weak var customBackButton: UIButton!
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var containerViewHeightConstraint: NSLayoutConstraint!
     @IBOutlet weak var backgroundImageView: UIImageView!
     @IBOutlet weak var imageAreaView: UIView!
+    
+    var movie: Movie!
+    var colors: UIImageColors? {
+        didSet {
+            imageAreaView.isHidden = true
+            if let colors = colors {
+                customBackButton.tintColor = colors.primary
+                UIView.animate(withDuration: 0.3, animations: {
+                    self.view.backgroundColor = colors.background
+                    self.imageAreaView.isHidden = false
+                })
+            }
+        }
+    }
+    
+    let viewModel = MovieDetailViewModel()
+    fileprivate let isIpad = UIDevice.current.userInterfaceIdiom == .pad
     
     fileprivate lazy var imageHelper: ImageHelper = {
         let helper = ImageHelper()
@@ -39,6 +51,7 @@ class MovieDetailViewController: LWViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         viewModel.delegate = self
+        backgroundColor = .white
         getData()
         UINavigationController.attemptRotationToDeviceOrientation()
     }
@@ -140,15 +153,9 @@ extension MovieDetailViewController: ImageHelperDelegate {
             myImage.contentMode = .scaleAspectFill
             imageAreaView.addSubview(myImage)
             imageAreaView.sendSubviewToBack(backgroundImageView)
-            let colors = image.getColors()
-            self.colors = colors
+            self.colors = image.getColors()
             configureDetail()
             stopLoading()
-            customBackButton.tintColor = colors.primary
-            UIView.animate(withDuration: 0.3, animations: {
-                self.view.backgroundColor = colors.background
-                self.imageAreaView.isHidden = false
-            })
         }
         if let backdropPath = viewModel.backdropPath, path == (backdropPath + movie.backdropPath) {
             backgroundImageView.image = image

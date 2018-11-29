@@ -38,6 +38,7 @@ protocol RequestHelperProtocol {
 }
 
 final class RequestHelper: RequestHelperProtocol {
+    let imageTypes = ["image/png", "image/jpeg"]
     var allowedCharacters = CharacterSet.urlQueryAllowed
     
     init() {
@@ -85,6 +86,33 @@ final class RequestHelper: RequestHelperProtocol {
                     let responseDTO = ResponseDTO<[T]>(success: false, message: error.localizedDescription, data: nil)
                     DispatchQueue.main.async {
                         callback(responseDTO)
+                    }
+                }
+        }
+        
+    }
+    
+    // download
+    func download(fromUrl url: String, andReturnTo callback: @escaping (Data?) -> Void)->Void {
+        guard let urlLocal = url.addingPercentEncoding(withAllowedCharacters: allowedCharacters) else { return }
+        
+        Alamofire.request(urlLocal)
+            .validate(contentType: self.imageTypes)
+            .responseData { response in
+                switch response.result {
+                case .success:
+                    if let data = response.data {
+                        DispatchQueue.main.async {
+                            callback(data)
+                        }
+                    } else {
+                        DispatchQueue.main.async {
+                            callback(nil)
+                        }
+                    }
+                case .failure:
+                    DispatchQueue.main.async {
+                        callback(nil)
                     }
                 }
         }

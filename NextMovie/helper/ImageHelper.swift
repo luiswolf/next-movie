@@ -15,29 +15,20 @@ protocol ImageHelperDelegate {
 }
 
 class ImageHelper {
-    let imageTypes = ["image/png", "image/jpeg"]
-    
     var delegate: ImageHelperDelegate?
+    var requestHelper = RequestHelper()
     
     func getImage(withPath path: String) {
         if let image = CacheHelper.sharedInstance.getImage(forKey: path) {
             delegate?.didGetImage(image: image, forPath: path)
         } else {
-            // TODO: COLOCAR EM CAMADA DE SERVICO
-            Alamofire.request(path)
-                .validate(contentType: self.imageTypes)
-                .responseData { response in
-                    switch response.result {
-                    case .success:
-                        if let data = response.data, let image = UIImage(data: data) {
-                            CacheHelper.sharedInstance.storeImage(image, forKey: path)
-                            self.delegate?.didGetImage(image: image, forPath: path)
-                        } else {
-                            self.delegate?.didFailToGetImage(forPath: path)
-                        }
-                    case .failure:
-                        self.delegate?.didFailToGetImage(forPath: path)
-                    }
+            requestHelper.download(fromUrl: path) { (data) in
+                if let data = data, let image = UIImage(data: data) {
+                    CacheHelper.sharedInstance.storeImage(image, forKey: path)
+                    self.delegate?.didGetImage(image: image, forPath: path)
+                } else {
+                    self.delegate?.didFailToGetImage(forPath: path)
+                }
             }
         }
     }
@@ -46,21 +37,13 @@ class ImageHelper {
         if let image = CacheHelper.sharedInstance.getImage(forKey: path) {
             completion(image)
         } else {
-            // TODO: COLOCAR EM CAMADA DE SERVICO
-            Alamofire.request(path)
-                .validate(contentType: self.imageTypes)
-                .responseData { response in
-                    switch response.result {
-                    case .success:
-                        if let data = response.data, let image = UIImage(data: data) {
-                            CacheHelper.sharedInstance.storeImage(image, forKey: path)
-                            completion(image)
-                        } else {
-                            completion(nil)
-                        }
-                    case .failure:
-                        completion(nil)
-                    }
+            requestHelper.download(fromUrl: path) { (data) in
+                if let data = data, let image = UIImage(data: data) {
+                    CacheHelper.sharedInstance.storeImage(image, forKey: path)
+                    completion(image)
+                } else {
+                    completion(nil)
+                }
             }
         }
     }

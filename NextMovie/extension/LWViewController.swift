@@ -12,6 +12,20 @@ class LWViewController: UIViewController, LWViewControllerProtocol {
 
     lazy var activityIndicator = UIActivityIndicatorView()
     
+    private var _backgroundColor: UIColor? {
+        didSet {
+            view.backgroundColor = _backgroundColor
+        }
+    }
+    var backgroundColor: UIColor? {
+        set {
+            _backgroundColor = newValue
+        }
+        get {
+            return _backgroundColor
+        }
+    }
+    
     lazy var loaderView: UIView = {
         let loader = UIView()
         loader.layer.zPosition = 998
