@@ -76,11 +76,19 @@ As long as the user scrolls down the screen, new itens are shown. The app make r
 
 <img src="screenshots/movie-list-01.png" width="250"><img src="screenshots/movie-list-02.png" width="250">
 
+*** 
+
 The user can also search for a specific movie by the native iOS search bar presented at the navigation bar.
 
-<img src="screenshots/movie-list-search-01.png" width="250">
+<img src="screenshots/movie-list-search-02.png" width="250">
 
 **PS. The main movie list make requests from the movie/upcoming API endpoint. The search make requests from the search/movie API endpoint**
+
+*** 
+
+If a network request fails, a generic error screen is show to the user.
+
+<img src="screenshots/movie-list-error-01.png" width="250">
 
 ### Movie detail
 
@@ -101,3 +109,26 @@ The application also was developed to iPad users, where both movie list and movi
 
 <img src="screenshots/ipad-01.png" width="500">
 
+### Extra: Internationalization
+
+As the application was developed in English language but it will be probably tested in Brazil, I decided to include the internalization to the Brazilian Portuguese language. 
+The internationalization considers the user's device preffer language to display the content. These languages are also used to get appropriate data within the TMDb API.
+
+<img src="screenshots/movie-list-portuguese-01.png" width="250">
+<img src="screenshots/movie-list-portuguese-02.png" width="250">
+
+## Requirements checklist
+
+- [x] Specify the used plataform
+- [x] Public repository
+- [x] Development branch
+- [x] Screenshots
+- [x] Pull request to master branch
+- [x] Clean code
+- [x] Best practices
+- [x] TMDb API usage
+- [x] Responsive layout (portrait/landscape)
+- [x] Upcoming movies list screen (showing the movie name, poster or backdrop image, genre and release date)
+- [x] Movie detail screen (showing the movie name, poster, genre, overview and release date)
+- [X] Pagination
+- [X] Search for partial or full movie name
