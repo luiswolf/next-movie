@@ -180,8 +180,11 @@
 			isa = PBXGroup;
 			children = (
 				A330BFD021AB37DD00C445DE /* error-view */,
+				A3B08C1221AE360C007C8338 /* DateFormatTransform.swift */,
 				A330BFD421AB37DD00C445DE /* LWContainerViewHeightProtocol.swift */,
+				A3CFBAED21ACBE8700CC46DB /* LWLabel.swift */,
 				A330BFB821AB213400C445DE /* LWNavigationController.swift */,
+				A3B08C0E21AE17B4007C8338 /* LWSplitViewController.swift */,
 				A330BFD321AB37DD00C445DE /* LWTableViewController.swift */,
 				A330BFD521AB37DE00C445DE /* LWViewController.swift */,
 				A330BFD621AB37DE00C445DE /* LWViewControllerProtocol.swift */,
@@ -189,9 +192,6 @@
 				A330BFDE21AB38D500C445DE /* UIFont.swift */,
 				A330BFDD21AB38D500C445DE /* UIImage.swift */,
 				A3B08C0821ADF3D0007C8338 /* UIImageColors.swift */,
-				A3CFBAED21ACBE8700CC46DB /* LWLabel.swift */,
-				A3B08C0E21AE17B4007C8338 /* LWSplitViewController.swift */,
-				A3B08C1221AE360C007C8338 /* DateFormatTransform.swift */,
 			);
 			path = extension;
 			sourceTree = "<group>";

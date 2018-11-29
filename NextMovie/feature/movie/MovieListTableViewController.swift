@@ -82,6 +82,7 @@ class MovieListTableViewController: LWTableViewController {
             if let navigationController = segue.destination as? UINavigationController, let vc = navigationController.topViewController as? MovieDetailViewController {
                 vc.title = movie.title
                 vc.movie = movie
+                vc.isSearchingOrigin = searchController.isActive
                 vc.navigationItem.leftBarButtonItem = splitViewController?.displayModeButtonItem
                 vc.navigationItem.leftItemsSupplementBackButton = true
             }
@@ -136,7 +137,7 @@ extension MovieListTableViewController {
                 let source = isSearching ? viewModel.movieListSearch : viewModel.movieList
                 if source.isEmpty {
                     let cell = tableView.dequeueReusableCell(withIdentifier: emptyCellIdentifier, for: indexPath)
-                    cell.textLabel?.text = "No movies found."
+                    cell.textLabel?.text = NSLocalizedString("No movies found.", comment: "Message shown when no movies was found by the API")
                     return cell
                 }
                 

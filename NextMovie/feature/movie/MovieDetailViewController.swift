@@ -16,6 +16,7 @@ class MovieDetailViewController: LWViewController {
     @IBOutlet weak var backgroundImageView: UIImageView!
     @IBOutlet weak var imageAreaView: UIView!
     
+    var isSearchingOrigin: Bool = false
     var movie: Movie!
     var colors: UIImageColors? {
         didSet {
@@ -58,7 +59,7 @@ class MovieDetailViewController: LWViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        customBackButton.isHidden = isIpad
+        customBackButton.isHidden = isIpad || isSearchingOrigin
         navigationController?.setNavigationBarHidden(!isIpad, animated: true)
     }
     

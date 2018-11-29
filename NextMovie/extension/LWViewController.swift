@@ -34,7 +34,7 @@ class LWViewController: UIViewController, LWViewControllerProtocol {
         loader.backgroundColor = .white
         activityIndicator = UIActivityIndicatorView(frame: CGRect(x: 0, y: 0, width: 50, height: 50))
         activityIndicator.style = .whiteLarge
-        activityIndicator.color = .red
+        activityIndicator.color = .black
         activityIndicator.hidesWhenStopped = true
         activityIndicator.center = loader.center
         activityIndicator.translatesAutoresizingMaskIntoConstraints = false
