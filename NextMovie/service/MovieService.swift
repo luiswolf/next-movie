@@ -24,7 +24,6 @@ class MovieService: NSObject {
     func getDetail(withId id: Int, andReturnTo callback: @escaping ((ResponseDTO<Movie>) -> Void)) {
         guard var url = ApiHelper.get(endpoint: .movieDetail) else { return }
         url = url.replacingOccurrences(of: ":id", with: String(id))
-        print(url)
         self.requestHelper.get(type: Movie.self, fromUrl: url, andReturnTo: callback)
     }
     
@@ -36,7 +35,6 @@ class MovieService: NSObject {
     func search(for query: String, withPage page: Int, andReturnTo callback: @escaping ((ResponseDTO<MovieWrapper>) -> Void)) {
         guard var url = ApiHelper.get(endpoint: .movieSearch, withPage: page) else { return }
         url = url.replacingOccurrences(of: ":query", with: query)
-        print(url)
         self.requestHelper.get(type: MovieWrapper.self, fromUrl: url, andReturnTo: callback)
     }
 }

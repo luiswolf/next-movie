@@ -15,9 +15,7 @@ final class ParseHelper {
         if let data = data {
             var jsonObject: Any!
             if let dataArray = data as? [Any?] {
-                //                print(dataArray)
-                jsonObject = dataArray.filter { $0 != nil } //o serviço retorna objetos nulos as vezes e evita que o parser tenha sucesso
-                //                print(jsonObject)
+                jsonObject = dataArray.filter { $0 != nil }
             } else {
                 jsonObject = data
             }
