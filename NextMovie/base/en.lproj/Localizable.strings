@@ -1,0 +1,18 @@
+/* 
+  Localizable.strings
+  NextMovie
+
+  Created by Luís Wolf on 28/11/2018.
+  Copyright © 2018 Luís Wolf. All rights reserved.
+*/
+"An unexpected error has occurred. Please try again later on." = "An unexpected error has occurred. Please try again later on.";
+"No connection" = "No connection";
+"Notice" = "Notice";
+"You're offline. Please check your internet connection." = "You're offline. Please check your internet connection.";
+"UPCOMING MOVIES" = "UPCOMING MOVIES";
+"SEARCH RESULTS" = "SEARCH RESULTS";
+"Genre: " = "Genre: ";
+"Release date: " = "Release date: ";
+"Rating: " = "Rating: ";
+"%.1f (%d votes)" = "%.1f (%d votes)";
+"No movies found." = "No movies found.";

@@ -1,0 +1,45 @@
+
+/* Class = "UILabel"; text = "Detail"; ObjectID = "2du-8D-8ig"; */
+"2du-8D-8ig.text" = "Detalhes";
+
+/* Class = "UILabel"; text = "Release date"; ObjectID = "2v4-Y7-cJT"; */
+"2v4-Y7-cJT.text" = "Data de lançamento";
+
+/* Class = "UILabel"; text = "Overview text"; ObjectID = "4bj-sY-AHw"; */
+"4bj-sY-AHw.text" = "Resumo";
+
+/* Class = "UILabel"; text = "Rating"; ObjectID = "7pL-rA-Rbd"; */
+"7pL-rA-Rbd.text" = "Classificação";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "DZ3-CM-dL6"; */
+"DZ3-CM-dL6.text" = "Label";
+
+/* Class = "UITableViewSection"; headerTitle = "OVERVIEW"; ObjectID = "EJ9-sS-Q6O"; */
+"EJ9-sS-Q6O.headerTitle" = "RESUMO";
+
+/* Class = "UITableViewSection"; headerTitle = "DETAILS"; ObjectID = "HoI-MH-5p6"; */
+"HoI-MH-5p6.headerTitle" = "DETALHES";
+
+/* Class = "UILabel"; text = "Genre"; ObjectID = "JcN-4X-Ra0"; */
+"JcN-4X-Ra0.text" = "Gênero";
+
+/* Class = "UINavigationController"; title = "asd"; ObjectID = "RdI-tt-0yg"; */
+"RdI-tt-0yg.title" = "asd";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "Sq7-kh-Rjb"; */
+"Sq7-kh-Rjb.text" = "Label";
+
+/* Class = "UIViewController"; title = "Detail"; ObjectID = "TJP-mA-zXT"; */
+"TJP-mA-zXT.title" = "Detalhe";
+
+/* Class = "UIButton"; normalTitle = "←"; ObjectID = "Wt0-zB-UOy"; */
+"Wt0-zB-UOy.normalTitle" = "←";
+
+/* Class = "UINavigationItem"; title = "Next Movie"; ObjectID = "cv6-p3-OjN"; */
+"cv6-p3-OjN.title" = "Próximos filmes";
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "eSs-hy-fVN"; */
+"eSs-hy-fVN.text" = "Title";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "hfQ-Fd-LNK"; */
+"hfQ-Fd-LNK.text" = "Label";
