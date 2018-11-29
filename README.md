@@ -114,8 +114,7 @@ The application also was developed to iPad users, where both movie list and movi
 As the application was developed in English language but it will be probably tested in Brazil, I decided to include the internalization to the Brazilian Portuguese language. 
 The internationalization considers the user's device preffer language to display the content. These languages are also used to get appropriate data within the TMDb API.
 
-<img src="screenshots/movie-list-portuguese-01.png" width="250">
-<img src="screenshots/movie-list-portuguese-02.png" width="250">
+<img src="screenshots/movie-list-portuguese-01.png" width="250"><img src="screenshots/movie-list-portuguese-02.png" width="250">
 
 ## Requirements checklist
 
