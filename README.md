@@ -76,12 +76,18 @@ As long as the user scrolls down the screen, new itens are shown. The app make r
 
 <img src="screenshots/movie-list-01.png" width="250"><img src="screenshots/movie-list-02.png" width="250">
 
+The user can also search for a specific movie by the native iOS search bar presented at the navigation bar.
+
+<img src="screenshots/movie-list-search-01.png" width="250">
+
+**PS. The main movie list make requests from the movie/upcoming API endpoint. The search make requests from the search/movie API endpoint**
+
 ### Movie detail
 
 The movie detail screen shows the basic details of the movie (Title, original title, genres, rating, release date and overview).
 In this screen was used a library/class that gets the main colors of an image. It was used to show a custom apperance according to the chosen movie.
 
-<img src="screenshots/movie-detail-01.png" width="250"><img src="screenshots/movie-detail-02.png" width="250"><img src="screenshots/movie-detail-04" width="250">
+<img src="screenshots/movie-detail-01.png" width="250"><img src="screenshots/movie-detail-02.png" width="250"><img src="screenshots/movie-detail-04.png" width="250">
 
 ### Movie detail - Landscape mode
 
@@ -93,5 +99,5 @@ As the user changes the orientation of the device (iPhone), is shown an interfac
 
 The application also was developed to iPad users, where both movie list and movie detail are shown by the UISplitViewController.
 
-<img src="screenshots/ipad-01.png" width="500"><img src="screenshots/ipad-02.png" width="500">
+<img src="screenshots/ipad-01.png" width="500">
 
