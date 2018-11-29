@@ -66,4 +66,13 @@ The due period of the challenge was 5 days, but I used around 20 hours to do it,
 
 This screen was developed to simple show a loader while the application loads the necessary content to use in the main areas of the application. This screen can also be used to decide the application flow based on some future situations, like check the user is logged in or make validations. By now, the screen just loads the list of movie genres that will be used in the movie list, because the upcoming movie list endpoint doesn't return the description of the movie gernres.
 
-<img src="https://github.com/luiswolf/movie-guide-app/raw/master/screenshots/movie-list.PNG" width="300">
+<img src="screenshots/movie-splash-01.png" width="300">
+
+### Movie list
+
+This is the main screen of the app. This screen shows the upcoming movies returned by the TMDb API. The basic information showed are: movie title, release date, movie genres and the poster of the movie.
+As long as the user scrolls down the screen, new itens are shown. The app make requests for 20 itens while the API returns.
+
+<img src="screenshots/movie-list-01.png" width="300">
+<img src="screenshots/movie-list-02.png" width="300">
+
