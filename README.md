@@ -70,9 +70,23 @@ This screen was developed to simple show a loader while the application loads th
 
 ### Movie list
 
-This is the main screen of the app. This screen shows the upcoming movies returned by the TMDb API. The basic information showed are: movie title, release date, movie genres and the poster of the movie.
+This is the main screen of the app. This screen shows the upcoming movies returned by the TMDb API. 
+The basic data shown are: movie title, release date, movie genres and the poster of the movie.
 As long as the user scrolls down the screen, new itens are shown. The app make requests for 20 itens while the API returns.
 
-<img src="screenshots/movie-list-01.png" width="300">
-<img src="screenshots/movie-list-02.png" width="300">
+<img src="screenshots/movie-list-01.png" width="300"><img src="screenshots/movie-list-02.png" width="300">
+
+### Movie detail
+
+The movie detail screen shows the basic details of the movie (Title, original title, genres, rating, release date and overview).
+In this screen was used a library/class that gets the main colors of an image. It was used to show a custom apperance according to the chosen movie.
+
+<img src="screenshots/movie-detail-01.png" width="300"><img src="screenshots/movie-detail-02.png" width="300">
+
+### Movie detail - Landscape mode
+
+As the user changes the orientation of the device (iPhone), is shown an interface a little different, keeping the movie poster fixed at left while the user can see the movie informations scrolling at right.
+
+<img src="screenshots/movie-detail-03-portrait.png" width="300"><img src="screenshots/movie-detail-03-landscape.png" width="300">
+
 
