@@ -72,7 +72,7 @@ This screen was developed to simple show a loader while the application loads th
 
 This is the main screen of the app. This screen shows the upcoming movies returned by the TMDb API. 
 The basic data shown are: movie title, release date, movie genres and the poster of the movie.
-As long as the user scrolls down the screen, new itens are shown. The app make requests for 20 itens while the API returns.
+As long as the user scrolls down the screen, new itens are shown. The app makes requests for each 20 itens while the API returns.
 
 <img src="screenshots/movie-list-01.png" width="250"><img src="screenshots/movie-list-02.png" width="250">
 
