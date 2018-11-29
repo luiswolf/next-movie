@@ -66,7 +66,7 @@ The due period of the challenge was 5 days, but I used around 20 hours to do it,
 
 This screen was developed to simple show a loader while the application loads the necessary content to use in the main areas of the application. This screen can also be used to decide the application flow based on some future situations, like check the user is logged in or make validations. By now, the screen just loads the list of movie genres that will be used in the movie list, because the upcoming movie list endpoint doesn't return the description of the movie gernres.
 
-<img src="screenshots/movie-splash-01.png" width="300">
+<img src="screenshots/movie-splash-01.png" width="250">
 
 ### Movie list
 
@@ -74,19 +74,19 @@ This is the main screen of the app. This screen shows the upcoming movies return
 The basic data shown are: movie title, release date, movie genres and the poster of the movie.
 As long as the user scrolls down the screen, new itens are shown. The app make requests for 20 itens while the API returns.
 
-<img src="screenshots/movie-list-01.png" width="300"><img src="screenshots/movie-list-02.png" width="300">
+<img src="screenshots/movie-list-01.png" width="250"><img src="screenshots/movie-list-02.png" width="250">
 
 ### Movie detail
 
 The movie detail screen shows the basic details of the movie (Title, original title, genres, rating, release date and overview).
 In this screen was used a library/class that gets the main colors of an image. It was used to show a custom apperance according to the chosen movie.
 
-<img src="screenshots/movie-detail-01.png" width="300"><img src="screenshots/movie-detail-02.png" width="300">
+<img src="screenshots/movie-detail-01.png" width="250"><img src="screenshots/movie-detail-02.png" width="250"><img src="screenshots/movie-detail-03.png" width="250">
 
 ### Movie detail - Landscape mode
 
 As the user changes the orientation of the device (iPhone), is shown an interface a little different, keeping the movie poster fixed at left while the user can see the movie informations scrolling at right.
 
-<img src="screenshots/movie-detail-03-portrait.png" width="300"><img src="screenshots/movie-detail-03-landscape.png" width="300">
+<img src="screenshots/movie-detail-03-portrait.png" width="250"><img src="screenshots/movie-detail-03-landscape.png" width="500">
 
 
