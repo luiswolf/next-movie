@@ -9,16 +9,75 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="SF-Pro-Display-Regular.otf">
+            <string>SFProDisplay-Regular</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="EHf-IW-A2E">
             <objects>
                 <viewController id="01J-lp-oVM" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
+                    <view key="view" contentMode="scaleToFill" id="jBt-1k-xt9">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bfC-Lo-aXq">
+                                <rect key="frame" x="24" y="210" width="327" height="247"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="movie" translatesAutoresizingMaskIntoConstraints="NO" id="Cfp-bQ-Gav">
+                                        <rect key="frame" x="67.5" y="0.0" width="192" height="192"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="192" id="oCV-jq-88B"/>
+                                            <constraint firstAttribute="width" secondItem="Cfp-bQ-Gav" secondAttribute="height" multiplier="1:1" id="xVv-wl-B5w"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Next Movie" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m9h-9J-Iow">
+                                        <rect key="frame" x="95" y="212" width="137" height="35"/>
+                                        <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="29"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="m9h-9J-Iow" secondAttribute="bottom" id="1mL-bl-qqu"/>
+                                    <constraint firstItem="m9h-9J-Iow" firstAttribute="centerX" secondItem="bfC-Lo-aXq" secondAttribute="centerX" id="5vW-Jz-H7h"/>
+                                    <constraint firstItem="m9h-9J-Iow" firstAttribute="top" secondItem="Cfp-bQ-Gav" secondAttribute="bottom" constant="20" id="LY2-sL-MPT"/>
+                                    <constraint firstItem="Cfp-bQ-Gav" firstAttribute="centerX" secondItem="bfC-Lo-aXq" secondAttribute="centerX" id="TDN-ER-8Bk"/>
+                                    <constraint firstItem="Cfp-bQ-Gav" firstAttribute="top" secondItem="bfC-Lo-aXq" secondAttribute="top" id="Xad-fk-NfK"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="© Luís Wolf 2018" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mKI-tg-Fp7">
+                                <rect key="frame" x="121.5" y="641" width="132" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <constraints>
+                            <constraint firstItem="bfC-Lo-aXq" firstAttribute="centerY" secondItem="jBt-1k-xt9" secondAttribute="centerY" id="F9v-B9-UCS"/>
+                            <constraint firstItem="bfC-Lo-aXq" firstAttribute="centerX" secondItem="jBt-1k-xt9" secondAttribute="centerX" id="Irb-fQ-6Lu"/>
+                            <constraint firstItem="bfC-Lo-aXq" firstAttribute="top" secondItem="ctd-CX-9lC" secondAttribute="top" constant="20" id="Zyk-AL-UVq"/>
+                            <constraint firstItem="ctd-CX-9lC" firstAttribute="bottom" secondItem="mKI-tg-Fp7" secondAttribute="bottom" constant="5" id="bhY-jk-akj"/>
+                            <constraint firstItem="bfC-Lo-aXq" firstAttribute="leading" secondItem="ctd-CX-9lC" secondAttribute="leading" constant="24" id="dqt-GV-IYA"/>
+                            <constraint firstItem="mKI-tg-Fp7" firstAttribute="centerX" secondItem="jBt-1k-xt9" secondAttribute="centerX" id="eCJ-Xz-9se"/>
+                            <constraint firstItem="ctd-CX-9lC" firstAttribute="trailing" secondItem="bfC-Lo-aXq" secondAttribute="trailing" constant="24" id="w5c-Li-hYX"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ctd-CX-9lC"/>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="Zyk-AL-UVq"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact-widthClass=regular">
+                            <mask key="constraints">
+                                <exclude reference="F9v-B9-UCS"/>
+                                <include reference="Zyk-AL-UVq"/>
+                            </mask>
+                        </variation>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -26,4 +85,7 @@
             <point key="canvasLocation" x="53" y="375"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="movie" width="256" height="256"/>
+    </resources>
 </document>

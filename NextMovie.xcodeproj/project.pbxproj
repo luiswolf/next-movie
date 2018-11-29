@@ -64,6 +64,7 @@
 		A306268321A9F18A001E48AA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A306268621A9F18A001E48AA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A306268821A9F18A001E48AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A328114221AF8D92000BFE2B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		A330BFB021AB1A5900C445DE /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		A330BFB421AB1CD100C445DE /* MovieListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListTableViewController.swift; sourceTree = "<group>"; };
 		A330BFB621AB1CE400C445DE /* MovieDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailViewController.swift; sourceTree = "<group>"; };
@@ -255,8 +256,8 @@
 			isa = PBXGroup;
 			children = (
 				A3CFBAEA21ACB48000CC46DB /* view-model */,
-				A306267E21A9F188001E48AA /* SplashViewController.swift */,
 				A306268021A9F188001E48AA /* Splash.storyboard */,
+				A306267E21A9F188001E48AA /* SplashViewController.swift */,
 			);
 			path = splash;
 			sourceTree = "<group>";
@@ -497,6 +498,7 @@
 			children = (
 				A306268621A9F18A001E48AA /* Base */,
 				A3B08C1F21AE4828007C8338 /* pt-BR */,
+				A328114221AF8D92000BFE2B /* en */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
