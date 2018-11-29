@@ -14,13 +14,17 @@ class MovieListTableViewController: LWTableViewController {
     
     var detailViewController: MovieDetailViewController? = nil
     var isFirstLoad: Bool = true
+    var isSearching: Bool = false
+    var query: String?
     fileprivate lazy var imageHelper: ImageHelper = {
         let helper = ImageHelper()
         return helper
     }()
     
+    let searchController = UISearchController(searchResultsController: nil)
     fileprivate let goToDetailIdentifier = "showDetail"
     fileprivate let cellIdentifier = "movieCell"
+    fileprivate let emptyCellIdentifier = "emptyCell"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,6 +32,13 @@ class MovieListTableViewController: LWTableViewController {
             title = appName
         }
         backgroundColor = .white
+        searchController.searchResultsUpdater = self
+        searchController.dimsBackgroundDuringPresentation = false
+        if #available(iOS 11.0, *) {
+            navigationItem.searchController = searchController
+        }
+        definesPresentationContext = true
+        
         if let split = splitViewController {
             split.preferredDisplayMode = .allVisible
             let controllers = split.viewControllers
@@ -45,15 +56,29 @@ class MovieListTableViewController: LWTableViewController {
     
     func getData() {
         if isFirstLoad { startLoading() }
-        tableView.reloadSections(IndexSet(integer: TableSection.loading.rawValue), with: .none)
         viewModel.getList()
+    }
+    
+    @objc func searchData(_ searchBar: UISearchBar) {
+        guard let text = searchBar.text else {
+            return
+        }
+        query = text.lowercased().trimmingCharacters(in: .newlines)
+        if let query = query, !query.isEmpty {
+            isSearching = true
+            viewModel.canGetData = true
+            viewModel.search(query)
+        } else {
+            isSearching = false
+            tableView.reloadData()
+        }
     }
     
     // MARK: - Segues
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == goToDetailIdentifier {
             guard let indexPath = tableView.indexPathForSelectedRow else { return }
-            let movie = viewModel.movieList[indexPath.row]
+            let movie = isSearching ? viewModel.movieListSearch[indexPath.row] :  viewModel.movieList[indexPath.row]
             if let navigationController = segue.destination as? UINavigationController, let vc = navigationController.topViewController as? MovieDetailViewController {
                 vc.title = movie.title
                 vc.movie = movie
@@ -64,6 +89,13 @@ class MovieListTableViewController: LWTableViewController {
     }
     
     @IBAction func unwindToMovieListViewController(segue : UIStoryboardSegue) {}
+}
+
+extension MovieListTableViewController: UISearchResultsUpdating {
+    func updateSearchResults(for searchController: UISearchController) {
+        NSObject.cancelPreviousPerformRequests(withTarget: self, selector: #selector(self.searchData(_:)), object: searchController.searchBar)
+        perform(#selector(self.searchData(_:)), with: searchController.searchBar, afterDelay: 0.5)
+    }
 }
 
 // - MARK: TableView
@@ -85,20 +117,31 @@ extension MovieListTableViewController {
         return .leastNonzeroMagnitude
     }
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return 2
+        return 1
     }
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         guard let section = TableSection(rawValue: section) else { return 0 }
-        if section == .movie { return viewModel.movieList.count }
-        if section == .loading && viewModel.canGetData { return 1 }
+        if section == .movie {
+            let source = isSearching ? viewModel.movieListSearch : viewModel.movieList
+            return source.isEmpty ? 1 : source.count
+        }
+//        if section == .loading && viewModel.canGetData { return 1 }
         return 0
     }
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let section = TableSection(rawValue: indexPath.section) else { return UITableViewCell() }
         switch section {
             case .movie:
+                
+                let source = isSearching ? viewModel.movieListSearch : viewModel.movieList
+                if source.isEmpty {
+                    let cell = tableView.dequeueReusableCell(withIdentifier: emptyCellIdentifier, for: indexPath)
+                    cell.textLabel?.text = "No movies found."
+                    return cell
+                }
+                
                 guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? MovieTableViewCell else { return UITableViewCell() }
-                let movie = viewModel.movieList[indexPath.row]
+                let movie = source[indexPath.row]
                 if let posterPath = viewModel.posterPath {
                     imageHelper.getImage(withPath: posterPath + movie.posterPath) { (image) in
                         if let image = image {
@@ -123,7 +166,12 @@ extension MovieListTableViewController {
         let offsetY = scrollView.contentOffset.y
         let contentHeight = scrollView.contentSize.height
         if viewModel.canGetData && offsetY > contentHeight - scrollView.frame.height * 4 {
-            viewModel.getList(forNextPage: true)
+            if isSearching, let query = query {
+                viewModel.search(query, forNextPage: true)
+            } else {
+                viewModel.getList(forNextPage: true)
+            }
+            viewModel.canGetData = false
         }
     }
 }

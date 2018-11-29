@@ -60,7 +60,7 @@ class LWTableViewController: UITableViewController, LWViewControllerProtocol {
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationController?.navigationBar.isTranslucent = false
-        automaticallyAdjustsScrollViewInsets = false
+        automaticallyAdjustsScrollViewInsets = true
     }
     
 }
