@@ -64,7 +64,7 @@ The due period of the challenge was 5 days, but I used around 20 hours to do it,
 
 ### Splash screen
 
-This screen was developed to simple show a loader while the application loads the necessary content to use in the main areas of the application. This screen can also be used to decide the application flow based on some future situations, like check the user is logged in or make validations. By now, the screen just loads the list of movie genres that will be used in the movie list, because the upcoming movie list endpoint doesn't return the description of the movie gernres.
+This screen was developed to simple show a loader while the application loads the necessary content to use in the main areas of the application. This screen can also be used to decide the application flow based on some future situations, like check the user is logged in or make validations. By now, the screen just loads the list of movie genres that will be used in the movie list, because the upcoming movie list endpoint doesn't return the description of the movie genres.
 
 <img src="screenshots/movie-splash-01.png" width="250">
 
@@ -132,3 +132,4 @@ The internationalization considers the user's device preffer language to display
 - [x] Movie detail screen (showing the movie name, poster, genre, overview and release date)
 - [X] Pagination
 - [X] Search for partial or full movie name
+- [X] Compile and run without errors
